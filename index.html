@@ -28,6 +28,7 @@
   --header-h:     56px;
   --radius:       8px;
   --radius-lg:    12px;
+  --content-max:  1200px;
   --font:         'Inter', sans-serif;
   --mono:         'JetBrains Mono', monospace;
   --transition:   0.2s ease;
@@ -141,9 +142,80 @@ a:hover { text-decoration: underline; }
 #content {
   margin-left: var(--sidebar-w);
   flex: 1;
-  padding: 40px 48px;
-  max-width: 960px;
+  min-width: 0;
+  padding: 0 0 60px 0;
+  max-width: var(--content-max);
 }
+
+/* ── CABECERA DE SECCIÓN CON IMAGEN ── */
+.section-hero {
+  width: 100%;
+  height: 220px;
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 36px;
+}
+.section-hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  transition: opacity 0.4s;
+}
+.section-hero-placeholder {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem;
+  opacity: 0.12;
+  user-select: none;
+}
+.section-hero-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--bg-primary) 0%, transparent 60%);
+}
+.section-hero-content {
+  position: relative; z-index: 2;
+  padding: 24px 40px;
+  width: 100%;
+}
+.section-hero-content .section-number {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--green-light);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.section-hero-content .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.section-hero-content .section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+.upload-hint {
+  position: absolute; top: 12px; right: 16px; z-index: 3;
+  font-size: 0.7rem; color: var(--text-dim);
+  background: rgba(13,17,23,0.7);
+  padding: 3px 10px; border-radius: 20px;
+  border: 1px solid var(--border);
+  cursor: default;
+}
+.section-hero input[type="file"] {
+  position: absolute; inset: 0; opacity: 0; cursor: pointer; z-index: 4;
+  width: 100%; height: 100%;
+}
+.section-hero:hover .upload-hint { color: var(--cyan); border-color: var(--cyan); }
+
+/* ── CONTENIDO INTERIOR ── */
+.section-body { padding: 0 40px; }
 
 /* ============================================================
    SECCIONES (PÁGINAS VIRTUALES)
@@ -589,11 +661,19 @@ tr:hover td { background: var(--bg-hover); }
          00 · INICIO / HOME
     ════════════════════════════════ -->
     <section id="page-home" class="page active">
-      <div class="hero">
-        <div class="hero-icon">🤖</div>
-        <h1>Inteligencia Artificial<br>para el Aula</h1>
-        <p>Guía técnica de herramientas de IA para 2º de Bachillerato TIC. Aprende a usar, dominar y aplicar la IA generativa con criterio profesional.</p>
-        <div class="callout callout-info" style="text-align:left;max-width:560px;margin:0 auto 24px;">
+      <div class="section-hero">
+        <div class="section-hero-placeholder">🤖</div>
+        <input type="file" accept="image/*" onchange="setHeroImg(this)" title="Haz clic para cambiar la imagen de cabecera"/>
+        <div class="section-hero-gradient"></div>
+        <span class="upload-hint">📷 Cambiar imagen</span>
+        <div class="section-hero-content">
+          <div class="section-number">BACHILLERATO TIC · 2º CURSO</div>
+          <div class="section-title">Inteligencia Artificial para el Aula</div>
+          <div class="section-subtitle">9 módulos prácticos · Herramientas reales · Prompts listos para usar</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="callout callout-info" style="margin-bottom:24px;">
           <span class="callout-icon">ℹ️</span>
           <p>Cada módulo incluye <strong>ficha técnica</strong>, <strong>teoría aplicada</strong>, <strong>práctica paso a paso</strong> y un <strong>Prompt Maestro</strong> listo para copiar.</p>
         </div>
