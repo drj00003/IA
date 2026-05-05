@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title><!-- TÍTULO DEL MÓDULO --> · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div id="overlay"></div>
+
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()" aria-label="Menú">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · Tecnologías de la Información</span>
+</header>
+
+<div id="layout">
+  <nav id="sidebar"><!-- renderizado por nav.js --></nav>
+
+  <main id="content">
+
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <div class="section-hero">
+      <!-- Sustituye src="" por la ruta de tu imagen, ej: src="img/mod03.jpg" -->
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO XX</div>
+        <h1 class="section-title">Título del Módulo</h1>
+        <p class="section-subtitle">Subtítulo descriptivo.</p>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════ CONTENIDO ═══════════════════════ -->
+    <div class="section-body">
+
+      <!-- FICHA TÉCNICA -->
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="#" target="_blank">Herramienta 1</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Concepto clave</div>
+        </div>
+      </div>
+
+      <!-- BLOQUE TEORÍA -->
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p>Contenido teórico aquí.</p>
+      </div>
+
+      <!-- BLOQUE PRÁCTICA -->
+      <div class="block">
+        <div class="block-title">Práctica Guiada <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Paso 1:</strong> Descripción.</li>
+        </ol>
+      </div>
+
+      <!-- PROMPT MAESTRO -->
+      <div class="block">
+        <div class="block-title">Prompt Maestro <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO</span>
+
+Contenido del prompt aquí.</div>
+        </div>
+      </div>
+
+    </div><!-- /section-body -->
+  </main>
+</div>
+
+<script src="nav.js"></script>
+</body>
+</html>

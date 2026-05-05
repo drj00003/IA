@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GPTs de ChatGPT · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+
+    <div class="section-hero">
+      <img src="img/mod02a.jpg" alt="GPTs" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 img/mod02a.jpg</div>
+      <div class="section-hero-content">
+        <div class="section-number">02 · A — SUBSECCIÓN</div>
+        <h1 class="section-title">GPTs de ChatGPT para el Aula</h1>
+        <p class="section-subtitle">Asistentes especializados sin una sola línea de código.</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://chatgpt.com/gpts" target="_blank">GPT Store</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://chatgpt.com/g/g-FBoeFpFdT-canva" target="_blank">Canva GPT</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://chatgpt.com/g/g-UHCIw1EBT-whimsical-diagrams" target="_blank">Whimsical Diagrams</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://chatgpt.com/g/g-R0vlWJr8l-scholar-ai" target="_blank">Scholar AI</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://chatgpt.com/g/g-2fkFE8rbu-diagrams-show-me" target="_blank">Diagrams: Show Me</a></div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">¿Qué es un GPT? <span class="tag tag-teoria">Teoría</span></div>
+        <p>Un <strong>GPT</strong> es un asistente de ChatGPT preconfigurado con un rol, instrucciones permanentes, herramientas y archivos de conocimiento específicos para un dominio concreto. Son gratuitos con cualquier cuenta de ChatGPT.</p>
+        <p>Técnicamente es una combinación de: <strong>system prompt extendido</strong> + <strong>knowledge files</strong> (PDFs propios del creador) + <strong>actions</strong> (conexiones a APIs externas como Canva o Whimsical), todo preempaquetado y listo para usar.</p>
+        <div class="callout callout-info" style="margin-top:12px;">
+          <span class="callout-icon">ℹ️</span>
+          <p>En el plan gratuito el modelo subyacente es <strong>GPT-4o mini</strong>, no GPT-4o completo. Los resultados siguen siendo muy útiles para el aula, especialmente en los GPTs con conexión a APIs externas como Canva o Whimsical.</p>
+        </div>
+        <!-- Diagrama de arquitectura -->
+        <div style="background:#010409;border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-top:16px;font-family:var(--mono);font-size:0.8rem;">
+          <div style="color:var(--text-dim);margin-bottom:12px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;">Arquitectura de un GPT</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;text-align:center;">
+            <div style="background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3);border-radius:6px;padding:10px 14px;color:var(--cyan);">👤<br><span style="font-size:0.7rem;">Tu prompt</span></div>
+            <div style="color:var(--text-dim);">→</div>
+            <div style="background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.3);border-radius:6px;padding:10px 14px;color:var(--accent-gold);">⚙️ System<br><span style="font-size:0.7rem;">Prompt del GPT</span></div>
+            <div style="color:var(--text-dim);">+</div>
+            <div style="background:rgba(248,81,73,0.1);border:1px solid rgba(248,81,73,0.3);border-radius:6px;padding:10px 14px;color:var(--accent-red);">📂 Knowledge<br><span style="font-size:0.7rem;">Archivos propios</span></div>
+            <div style="color:var(--text-dim);">+</div>
+            <div style="background:rgba(46,160,67,0.1);border:1px solid rgba(46,160,67,0.3);border-radius:6px;padding:10px 14px;color:var(--green-light);">🔌 Actions<br><span style="font-size:0.7rem;">APIs externas</span></div>
+            <div style="color:var(--text-dim);">→</div>
+            <div style="background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3);border-radius:6px;padding:10px 14px;color:var(--cyan);">✨<br><span style="font-size:0.7rem;">Respuesta</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">GPTs educativos recomendados <span class="tag tag-comparativa">Comparativa</span></div>
+
+        <div class="gpt-accordion">
+          <div class="gpt-acc-header" onclick="toggleAcc(this)">
+            <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.4rem;">🎨</span><div><div style="font-weight:600;color:var(--text-primary);">Canva</div><div style="font-size:0.78rem;color:var(--text-muted);">Infografías, pósters y presentaciones desde lenguaje natural</div></div></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span class="badge badge-free">Gratis</span><span class="acc-arrow">▾</span></div>
+          </div>
+          <div class="gpt-acc-body">
+            <p><strong>Qué hace:</strong> Conecta ChatGPT con tu cuenta de Canva. Describes el diseño y el GPT lo genera devolviéndote el enlace para editar. Necesitas vincular tu cuenta Canva (gratuita) la primera vez mediante OAuth.</p>
+            <p><strong>Caso de uso:</strong> Trabajos de investigación con componente visual, proyectos interdisciplinares, entregas que requieran material gráfico profesional sin conocimientos de diseño.</p>
+            <div class="code-block" style="margin-top:12px;">
+              <div class="code-header"><div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><span>prompt-canva-gpt.txt</span><button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button></div>
+              <div class="code-content"><span class="cmt"># PROMPT PARA CANVA GPT</span>
+Crea una infografía vertical (A4) sobre [TEMA].
+Incluye: título principal, 4 secciones con icono + título + 2-3 líneas,
+un dato estadístico destacado en grande y fuente al pie.
+Estilo: moderno, paleta [azul y blanco / verde y negro],
+tipografía sans-serif, fondo no blanco.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gpt-accordion" style="margin-top:10px;">
+          <div class="gpt-acc-header" onclick="toggleAcc(this)">
+            <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.4rem;">🗂️</span><div><div style="font-weight:600;color:var(--text-primary);">Whimsical Diagrams</div><div style="font-size:0.78rem;color:var(--text-muted);">Flujos, mapas mentales y wireframes desde texto</div></div></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span class="badge badge-free">Gratis</span><span class="acc-arrow">▾</span></div>
+          </div>
+          <div class="gpt-acc-body">
+            <p><strong>Qué hace:</strong> Genera diagramas de flujo y mapas mentales editables en Whimsical a partir de descripciones en lenguaje natural.</p>
+            <p><strong>Caso de uso:</strong> Visualizar algoritmos, procesos históricos, ciclos biológicos. Úsalo para flujos con decisiones (Sí/No) y GitMind (Módulo 07) para estructuras jerárquicas conceptuales.</p>
+            <div class="code-block" style="margin-top:12px;">
+              <div class="code-header"><div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><span>prompt-whimsical.txt</span><button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button></div>
+              <div class="code-content"><span class="cmt"># PROMPT PARA WHIMSICAL DIAGRAMS</span>
+Crea un diagrama de flujo que represente el proceso de [PROCESO].
+- Inicio y fin claramente marcados.
+- Al menos 2 decisiones (nodos Sí/No).
+- Máximo 10 nodos. Etiquetas en español.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gpt-accordion" style="margin-top:10px;">
+          <div class="gpt-acc-header" onclick="toggleAcc(this)">
+            <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.4rem;">🎓</span><div><div style="font-weight:600;color:var(--text-primary);">Scholar AI</div><div style="font-size:0.78rem;color:var(--text-muted);">+200M papers académicos con DOIs verificables</div></div></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span class="badge badge-both">Freemium</span><span class="acc-arrow">▾</span></div>
+          </div>
+          <div class="gpt-acc-body">
+            <p><strong>Qué hace:</strong> Accede a bases de datos académicas desde ChatGPT respondiendo con DOIs verificables. Nunca inventa referencias. Tiene ~3 consultas gratuitas por sesión; combínalo con Consensus (Módulo 08) para trabajo intensivo.</p>
+            <p><strong>Caso de uso:</strong> Imprescindible para el TFB o Trabajo de Investigación.</p>
+            <div class="code-block" style="margin-top:12px;">
+              <div class="code-header"><div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><span>prompt-scholar-ai.txt</span><button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button></div>
+              <div class="code-content"><span class="cmt"># PROMPT PARA SCHOLAR AI</span>
+Busca papers sobre [TEMA], publicados entre [AÑO] y [AÑO],
+revisados por pares. Para cada resultado: título, autores,
+año, DOI y resumen en español (máx. 3 frases).
+Sintetiza el estado del conocimiento en 100 palabras al final.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gpt-accordion" style="margin-top:10px;">
+          <div class="gpt-acc-header" onclick="toggleAcc(this)">
+            <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.4rem;">📐</span><div><div style="font-weight:600;color:var(--text-primary);">Diagrams: Show Me</div><div style="font-size:0.78rem;color:var(--text-muted);">UML, ERD y arquitecturas técnicas en Mermaid</div></div></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span class="badge badge-free">Gratis</span><span class="acc-arrow">▾</span></div>
+          </div>
+          <div class="gpt-acc-body">
+            <p><strong>Qué hace:</strong> Genera diagramas técnicos Mermaid (UML, ERD, secuencias, Gantt). Perfecto para la parte de programación y bases de datos del currículo TIC.</p>
+            <div class="callout callout-tip" style="margin-top:10px;"><span class="callout-icon">💡</span><p>Usa Show Me para <strong>diagramas UML/ER técnicos</strong> y Whimsical para flujos de proceso conceptuales.</p></div>
+            <div class="code-block" style="margin-top:12px;">
+              <div class="code-header"><div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><span>prompt-showme.txt</span><button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button></div>
+              <div class="code-content"><span class="cmt"># PROMPT PARA DIAGRAMS: SHOW ME</span>
+Crea un diagrama entidad-relación (ERD) para una base de datos
+de [SISTEMA]. Entidades: [lista]. Incluye atributos, claves
+primarias, foráneas y cardinalidades.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica — Flujo encadenado con 3 GPTs <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Scholar AI → Investigación base:</strong> busca 3-5 papers sobre tu tema. Copia títulos y resúmenes.</li>
+          <li><strong>Whimsical → Mapa mental:</strong> genera un mapa con los conceptos clave extraídos de los abstracts.</li>
+          <li><strong>Canva → Infografía:</strong> con el mapa como guía, genera una infografía lista para presentar.</li>
+          <li><strong>Verifica</strong> cada output: DOIs en Scholar AI, jerarquía en Whimsical, diseño en Canva.</li>
+          <li><strong>Cita las herramientas</strong> en tu trabajo igual que las fuentes bibliográficas.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">🧠 Quiz — GPTs de ChatGPT <span class="tag tag-comparativa">Test</span></div>
+        <div id="quiz-gpts">
+          <div class="quiz-q">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">1. ¿Qué diferencia técnica principal tiene un GPT respecto al ChatGPT estándar?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Usa un modelo de IA diferente y más potente</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Lleva un system prompt, knowledge files y actions precargados</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Solo está disponible para usuarios de pago</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">2. Para un diagrama entidad-relación de base de datos, ¿qué GPT es más adecuado?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Canva</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Whimsical Diagrams</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Diagrams: Show Me</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">3. Scholar AI te da una referencia bibliográfica. ¿Cuál es el paso imprescindible antes de citarla?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Verificar el paper buscando su DOI en Google Scholar o PubMed</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Citarla directamente, Scholar AI no inventa referencias</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Pedir a ChatGPT que la confirme</div>
+            </div>
+          </div>
+          <div id="quiz-gpts-score" style="display:none;"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

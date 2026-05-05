@@ -1,0 +1,440 @@
+<!-- ============================================================
+     mod04-pres.html — Generación de Presentaciones
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Presentaciones · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 04</div>
+        <h1 class="section-title">Generación de Presentaciones</h1>
+        <p class="section-subtitle">Flujos de trabajo con Gamma y PowerPoint AI.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://gamma.app" target="_blank">Gamma.app</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://www.microsoft.com/microsoft-365" target="_blank">PowerPoint + Copilot</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Outline → Deck · Diseño automático</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p><strong>Gamma</strong> transforma un esquema textual (outline) en una presentación completa con diseño, tipografías e imágenes. El flujo es: <em>Prompt → Outline generado → Deck editado → Exportación</em>.</p>
+        <p><strong>PowerPoint + Copilot</strong> (Microsoft 365) permite generar slides desde un documento Word, refinar contenido con prompts dentro de la app y auto-diseñar layouts con Designer. Requiere licencia M365.</p>
+        <div class="callout callout-tip" style="margin-top:12px;">
+          <span class="callout-icon">💡</span>
+          <p>El error más común es pedir "haz una presentación sobre X" sin contexto. Especifica siempre: audiencia, duración, número de slides y tono. Cuanto más específico, más utilizables serán las diapositivas.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — Gamma <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Crea cuenta gratuita</strong> en <a href="https://gamma.app" target="_blank">gamma.app</a>. El plan free incluye 400 créditos iniciales.</li>
+          <li><strong>"Generar" → "Presentación" → "Generar desde un prompt".</strong></li>
+          <li><strong>Introduce el prompt detallado</strong> (usa la estructura del Prompt Maestro). Gamma generará primero un outline editable.</li>
+          <li><strong>Revisa y edita el outline</strong> antes de generar el deck. Este paso es crítico: añade, elimina o reordena secciones según necesites.</li>
+          <li><strong>Selecciona el tema visual</strong> (paleta + tipografía) y genera el deck completo.</li>
+          <li><strong>Edita slide por slide:</strong> haz clic en cualquier elemento. Pide a la IA del panel lateral que "reescriba este párrafo en tono más técnico".</li>
+          <li><strong>Exporta</strong> en PDF o PowerPoint (.pptx) para entregar o seguir editando.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Gamma <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>gamma-presentation-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO PARA GAMMA.APP</span>
+
+Crea una presentación profesional sobre [TEMA].
+
+Detalles:
+- Audiencia: [estudiantes de bachillerato / clientes / directivos]
+- Duración estimada: [10 minutos]
+- Número de slides: [8-10]
+- Tono: [formal y técnico / divulgativo / motivador]
+- Idioma: español
+
+Estructura requerida:
+1. Portada con título impactante y subtítulo
+2. Índice / Agenda
+3. [Sección 1 — concepto clave]
+4. [Sección 2 — datos o estadísticas]
+5. [Sección 3 — ejemplos o casos de uso]
+6. [Sección 4 — ventajas y limitaciones]
+7. Conclusiones en 3 puntos clave
+8. Slide de cierre con llamada a la acción
+
+Estilo: moderno, minimalista, con iconos y datos visualizados.
+Incluye una imagen relevante por slide siempre que sea posible.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
+
+
+<!-- ============================================================
+     mod05-hojas.html — Hojas de Cálculo con IA
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hojas de Cálculo · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 05</div>
+        <h1 class="section-title">IA en Hojas de Cálculo</h1>
+        <p class="section-subtitle">Excel y Google Sheets potenciados con inteligencia artificial.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://sheets.google.com" target="_blank">Google Sheets + Gemini</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://www.microsoft.com/microsoft-365/excel" target="_blank">Excel + Copilot</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Fórmulas · Apps Script · VBA</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p>La IA en hojas de cálculo opera en tres niveles: <strong>generación de fórmulas</strong> (describes en lenguaje natural lo que quieres calcular y la IA escribe la fórmula), <strong>análisis de datos</strong> (tendencias, anomalías, correlaciones) y <strong>automatización</strong> (scripts en Apps Script o VBA).</p>
+        <p>Sin acceso a Copilot (de pago), puedes usar <strong>ChatGPT o Gemini como asistente externo</strong>: describes el problema, pegas una muestra de datos y obtienes la fórmula lista para copiar.</p>
+        <div class="callout callout-info" style="margin-top:12px;">
+          <span class="callout-icon">ℹ️</span>
+          <p>Google Sheets integra <strong>Gemini</strong> de forma nativa (panel lateral → "Preguntar a Gemini"). Permite analizar el rango seleccionado, crear gráficos y explicar fórmulas existentes directamente en la hoja.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — Fórmulas con IA <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Abre Google Sheets</strong> con una tabla de datos (notas de alumnos, ventas por mes…).</li>
+          <li><strong>Abre Gemini</strong> en pestaña paralela. Describe la estructura de tu tabla: columnas, filas, qué datos contiene.</li>
+          <li><strong>Pide la fórmula en lenguaje natural:</strong> "Necesito una fórmula que calcule el promedio de B2:B20 solo si el valor en columna C es mayor que 50".</li>
+          <li><strong>Copia la fórmula generada</strong> y pégala en Sheets. Verifica el resultado.</li>
+          <li><strong>Si hay errores,</strong> vuelve al chat y pega el mensaje de error exacto. La IA corregirá la fórmula.</li>
+          <li><strong>Genera un gráfico:</strong> selecciona el rango, activa el panel Gemini y pide "Crea un gráfico de barras comparando las columnas A y B".</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Asistente de Fórmulas <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>spreadsheet-formula-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ASISTENTE DE HOJAS DE CÁLCULO</span>
+
+Actúa como un experto en [Google Sheets / Microsoft Excel].
+
+Mi hoja tiene esta estructura:
+- Columna A: [ej: "Nombres de alumnos"]
+- Columna B: [ej: "Nota del examen (0-10)"]
+- Columna C: [ej: "Asistencia en porcentaje"]
+- Los datos empiezan en fila 2. Hay [X] filas de datos.
+
+Necesito que hagas lo siguiente:
+1. [Tarea 1: ej: "Calcular la media de B solo si C > 80"]
+2. [Tarea 2: ej: "Marcar en rojo las celdas donde B < 5"]
+3. [Tarea 3: ej: "Crear columna D con 'Aprobado' o 'Suspenso'"]
+
+Requisitos:
+- Fórmulas listas para copiar y pegar.
+- Explica brevemente qué hace cada función.
+- Si necesitas Apps Script, incluye el código completo.
+- Usa sintaxis de [Google Sheets / Excel].</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
+
+
+<!-- ============================================================
+     mod06-trans.html — Transcripciones e Idiomas
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Transcripciones e Idiomas · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 06</div>
+        <h1 class="section-title">Transcripciones e Idiomas</h1>
+        <p class="section-subtitle">Transkribus, Rask.ai y Tactiq.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://transkribus.eu" target="_blank">Transkribus</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://rask.ai" target="_blank">Rask.ai</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://tactiq.io" target="_blank">Tactiq</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>ASR · HTR · Doblaje IA · STT</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p>Las tres herramientas atacan el problema del <strong>habla y texto como dato</strong> desde ángulos distintos:</p>
+        <div class="card-grid" style="margin-top:12px;">
+          <div class="card">
+            <div class="card-icon">📜</div>
+            <div class="card-name">Transkribus</div>
+            <div class="card-desc">Especializado en <strong>transcripción de documentos históricos y manuscritos</strong>. Usa HTR (Handwritten Text Recognition). Ideal para Historia.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎬</div>
+            <div class="card-name">Rask.ai</div>
+            <div class="card-desc"><strong>Doblaje y traducción de vídeo con clonación de voz.</strong> Sube un vídeo en inglés → versión doblada al español manteniendo la voz original.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🖥️</div>
+            <div class="card-name">Tactiq</div>
+            <div class="card-desc"><strong>Transcripción en tiempo real de reuniones</strong> (Meet, Zoom, Teams). Genera resúmenes automáticos y extrae tareas pendientes.</div>
+          </div>
+        </div>
+        <div class="callout callout-warn" style="margin-top:14px;">
+          <span class="callout-icon">⚠️</span>
+          <p>Los modelos ASR tienen una tasa de error (WER) que varía según el acento, calidad del audio y vocabulario técnico. <strong>Revisa siempre la transcripción antes de usarla como fuente.</strong></p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — Tactiq en Google Meet <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Instala la extensión Tactiq</strong> desde la Chrome Web Store. Requiere cuenta Google.</li>
+          <li><strong>Inicia una sesión de Google Meet.</strong> Tactiq aparece automáticamente en el panel lateral.</li>
+          <li><strong>Activa la transcripción</strong> con "Start Transcription". El texto aparece en tiempo real.</li>
+          <li><strong>Al finalizar,</strong> haz clic en "Generate Summary". Tactiq enviará la transcripción a un LLM y generará un resumen estructurado.</li>
+          <li><strong>Exporta a Google Docs</strong> o copia el resumen. Revisa nombres propios y términos técnicos.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Post-transcripción <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>transcription-analysis-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ANÁLISIS DE TRANSCRIPCIONES</span>
+
+Actúa como un asistente de análisis de contenido especializado
+en procesamiento de texto hablado.
+
+A continuación te proporciono la transcripción de [una reunión /
+una clase / un vídeo] sobre [tema]. Puede contener errores de
+reconocimiento de voz.
+
+Tu tarea:
+1. <span class="hl">LIMPIAR:</span> Corrige errores ortográficos y de transcripción obvios.
+2. <span class="hl">RESUMIR:</span> 5 puntos clave (máx. 2 líneas cada uno).
+3. <span class="hl">TAREAS:</span> Lista acciones pendientes mencionadas.
+   Formato: "✅ [responsable]: [tarea]"
+4. <span class="hl">GLOSARIO:</span> 5 términos técnicos más relevantes + definición en 1 frase.
+
+Formato de salida: Markdown con encabezados H2 por sección.
+
+---
+TRANSCRIPCIÓN:
+[Pega aquí la transcripción completa]</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
+
+
+<!-- ============================================================
+     mod07-visual.html — Organización Visual / GitMind
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Organización Visual · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 07</div>
+        <h1 class="section-title">Organización Visual</h1>
+        <p class="section-subtitle">Mapas mentales y diagramas con GitMind.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://gitmind.com" target="_blank">GitMind</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Mapa mental · Diagrama de flujo</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Colaboración en tiempo real</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p><strong>GitMind</strong> es una herramienta de mapas mentales que incorpora IA generativa para transformar texto en estructuras visuales jerárquicas. El flujo es: <em>tema o texto → análisis semántico → árbol de nodos → exportación</em>.</p>
+        <p>La utilidad pedagógica reside en la <strong>externalización cognitiva</strong>: la IA extrae las relaciones entre conceptos que un alumno podría tardar horas en mapear manualmente, liberando tiempo para el análisis crítico.</p>
+        <div class="callout callout-tip" style="margin-top:12px;">
+          <span class="callout-icon">💡</span>
+          <p>GitMind permite <strong>edición colaborativa en tiempo real</strong>. Ideal para que distintos grupos expandan ramas diferentes del mismo mapa en clase.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — GitMind con IA <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Crea cuenta gratuita</strong> en <a href="https://gitmind.com" target="_blank">gitmind.com</a> con tu cuenta Google.</li>
+          <li><strong>"Nuevo" → "Generar con IA".</strong> Elige: Mapa Mental o Diagrama de Flujo.</li>
+          <li><strong>Introduce el topic o pega un texto.</strong> GitMind extrae nodos automáticamente del texto que pegues.</li>
+          <li><strong>Revisa la estructura.</strong> Verifica que las relaciones padre-hijo tengan sentido lógico.</li>
+          <li><strong>Edita:</strong> Tab = subnodo, Enter = mismo nivel. Cambia el tema visual para mejorar la legibilidad.</li>
+          <li><strong>Activa el modo "Presentación"</strong> para usarlo directamente en clase proyectado.</li>
+          <li><strong>Exporta</strong> en PNG, PDF o comparte el enlace público para entregar.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Estructura para GitMind <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>mindmap-structure-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ESTRUCTURA PARA MAPA MENTAL (GitMind)</span>
+<span class="cmt"># Úsalo en ChatGPT/Gemini para obtener la jerarquía y luego pégala en GitMind</span>
+
+Actúa como experto en cartografía conceptual y didáctica.
+Genera la estructura jerárquica de un mapa mental sobre: <span class="hl">[TEMA]</span>
+
+Requisitos:
+- Nodo raíz: "[TEMA]"
+- Exactamente [4-6] ramas principales (nivel 1)
+- Cada rama: [3-4] subnodos (nivel 2)
+- Los subnodos importantes: [2] hojas (nivel 3)
+- Máximo 4 palabras por nodo
+
+Formato de salida (usa esta indentación exacta):
+[TEMA CENTRAL]
+├── Rama 1
+│   ├── Subnodo 1.1
+│   │   └── Detalle 1.1.1
+│   └── Subnodo 1.2
+├── Rama 2
+[continúa el patrón...]
+
+Al final, añade 3 "relaciones cruzadas" entre nodos de distintas
+ramas que aporten valor conceptual.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
