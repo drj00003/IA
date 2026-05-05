@@ -1,0 +1,121 @@
+<!-- ============================================================
+     mod06-trans.html — Transcripciones e Idiomas
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Transcripciones e Idiomas · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 06</div>
+        <h1 class="section-title">Transcripciones e Idiomas</h1>
+        <p class="section-subtitle">Transkribus, Rask.ai y Tactiq.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://transkribus.eu" target="_blank">Transkribus</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://rask.ai" target="_blank">Rask.ai</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://tactiq.io" target="_blank">Tactiq</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>ASR · HTR · Doblaje IA · STT</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p>Las tres herramientas atacan el problema del <strong>habla y texto como dato</strong> desde ángulos distintos:</p>
+        <div class="card-grid" style="margin-top:12px;">
+          <div class="card">
+            <div class="card-icon">📜</div>
+            <div class="card-name">Transkribus</div>
+            <div class="card-desc">Especializado en <strong>transcripción de documentos históricos y manuscritos</strong>. Usa HTR (Handwritten Text Recognition). Ideal para Historia.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎬</div>
+            <div class="card-name">Rask.ai</div>
+            <div class="card-desc"><strong>Doblaje y traducción de vídeo con clonación de voz.</strong> Sube un vídeo en inglés → versión doblada al español manteniendo la voz original.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🖥️</div>
+            <div class="card-name">Tactiq</div>
+            <div class="card-desc"><strong>Transcripción en tiempo real de reuniones</strong> (Meet, Zoom, Teams). Genera resúmenes automáticos y extrae tareas pendientes.</div>
+          </div>
+        </div>
+        <div class="callout callout-warn" style="margin-top:14px;">
+          <span class="callout-icon">⚠️</span>
+          <p>Los modelos ASR tienen una tasa de error (WER) que varía según el acento, calidad del audio y vocabulario técnico. <strong>Revisa siempre la transcripción antes de usarla como fuente.</strong></p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — Tactiq en Google Meet <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Instala la extensión Tactiq</strong> desde la Chrome Web Store. Requiere cuenta Google.</li>
+          <li><strong>Inicia una sesión de Google Meet.</strong> Tactiq aparece automáticamente en el panel lateral.</li>
+          <li><strong>Activa la transcripción</strong> con "Start Transcription". El texto aparece en tiempo real.</li>
+          <li><strong>Al finalizar,</strong> haz clic en "Generate Summary". Tactiq enviará la transcripción a un LLM y generará un resumen estructurado.</li>
+          <li><strong>Exporta a Google Docs</strong> o copia el resumen. Revisa nombres propios y términos técnicos.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Post-transcripción <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>transcription-analysis-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ANÁLISIS DE TRANSCRIPCIONES</span>
+
+Actúa como un asistente de análisis de contenido especializado
+en procesamiento de texto hablado.
+
+A continuación te proporciono la transcripción de [una reunión /
+una clase / un vídeo] sobre [tema]. Puede contener errores de
+reconocimiento de voz.
+
+Tu tarea:
+1. <span class="hl">LIMPIAR:</span> Corrige errores ortográficos y de transcripción obvios.
+2. <span class="hl">RESUMIR:</span> 5 puntos clave (máx. 2 líneas cada uno).
+3. <span class="hl">TAREAS:</span> Lista acciones pendientes mencionadas.
+   Formato: "✅ [responsable]: [tarea]"
+4. <span class="hl">GLOSARIO:</span> 5 términos técnicos más relevantes + definición en 1 frase.
+
+Formato de salida: Markdown con encabezados H2 por sección.
+
+---
+TRANSCRIPCIÓN:
+[Pega aquí la transcripción completa]</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,209 @@
+
+
+
+<!-- ============================================================
+     mod02c-claude.html — Claude: Artefactos y Proyectos
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Claude: Artefactos · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+
+    <div class="section-hero">
+      <img src="img/mod02c.jpg" alt="Claude Artefactos" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 img/mod02c.jpg</div>
+      <div class="section-hero-content">
+        <div class="section-number">02 · C — SUBSECCIÓN</div>
+        <h1 class="section-title">Claude — Artefactos y Proyectos</h1>
+        <p class="section-subtitle">Genera webs, apps y visualizaciones interactivas directamente en el chat.</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://claude.ai" target="_blank">claude.ai</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Artefactos: HTML, React, SVG, Markdown</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Proyectos: contexto persistente</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Anthropic · Plan gratuito disponible</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">¿Qué hace diferente a Claude? <span class="tag tag-teoria">Teoría</span></div>
+        <p>Claude (Anthropic) destaca por dos capacidades que otros modelos no integran de forma tan fluida en la interfaz de chat: los <strong>Artefactos</strong> y los <strong>Proyectos</strong>. Fue entrenado con énfasis en seguir instrucciones complejas con precisión, razonamiento de larga extensión y generación de código funcional.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px;">
+          <div style="background:rgba(88,166,255,0.06);border:1px solid rgba(88,166,255,0.2);border-radius:var(--radius);padding:16px;">
+            <div style="font-size:1.4rem;margin-bottom:8px;">🧩</div>
+            <div style="font-weight:600;color:var(--text-primary);margin-bottom:6px;">Artefactos</div>
+            <p style="font-size:0.82rem;margin:0;">Ventana lateral que renderiza en tiempo real el output generado: páginas web funcionales, código ejecutable, documentos Markdown, visualizaciones SVG, apps React. El resultado no es texto: <em>es el artefacto en sí</em>, interactivo y descargable.</p>
+          </div>
+          <div style="background:rgba(46,160,67,0.06);border:1px solid rgba(46,160,67,0.2);border-radius:var(--radius);padding:16px;">
+            <div style="font-size:1.4rem;margin-bottom:8px;">📁</div>
+            <div style="font-weight:600;color:var(--text-primary);margin-bottom:6px;">Proyectos</div>
+            <p style="font-size:0.82rem;margin:0;">Espacio de trabajo con <strong>memoria persistente entre conversaciones</strong>. Sube archivos de referencia que Claude recordará en todas las sesiones del proyecto: apuntes, código base, guías de estilo, rúbricas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Tipos de Artefactos <span class="tag tag-teoria">Teoría</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tipo</th><th>Qué genera</th><th>Caso de uso TIC</th></tr></thead>
+            <tbody>
+              <tr><td><strong>HTML/CSS/JS</strong></td><td>Páginas web completas, apps interactivas</td><td>Proyectos web, juegos educativos, portfolios</td></tr>
+              <tr><td><strong>React</strong></td><td>Componentes y apps con estado dinámico</td><td>Simuladores, calculadoras, formularios</td></tr>
+              <tr><td><strong>SVG</strong></td><td>Gráficos vectoriales, diagramas</td><td>Diagramas de flujo, mapas conceptuales</td></tr>
+              <tr><td><strong>Markdown</strong></td><td>Documentos estructurados, informes</td><td>Memorias de proyecto, README de GitHub</td></tr>
+              <tr><td><strong>Código</strong></td><td>Python, JS, SQL con sintaxis resaltada</td><td>Scripts, consultas, funciones reutilizables</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-tip" style="margin-top:14px;">
+          <span class="callout-icon">💡</span>
+          <p><strong>Flujo de trabajo:</strong> pides el artefacto → Claude lo genera en la ventana lateral → lo editas a través del chat ("añade un botón de reseteo", "cambia los colores a paleta oscura") → lo descargas como <code>index.html</code> y lo subes a GitHub Pages.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Caso práctico — App de ejercicios interactivos para TIC <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Crea cuenta en <a href="https://claude.ai" target="_blank">claude.ai</a></strong> (gratuita). Verifica que los Artefactos están activados: menú lateral → configuración → Artefactos: ON.</li>
+          <li><strong>Inicia un nuevo chat</strong> y envía el Prompt Maestro de abajo. Claude generará el artefacto en la ventana lateral mientras responde.</li>
+          <li><strong>Observa la previsualización en tiempo real:</strong> verás la app aparecer mientras Claude escribe el código. Puedes interactuar con ella directamente.</li>
+          <li><strong>Refina con instrucciones:</strong> "Añade una pregunta sobre bucles FOR", "Cambia el diseño a fondo más oscuro", "Añade un contador de racha correcta".</li>
+          <li><strong>Descarga el artefacto:</strong> botón de descarga → archivo <code>index.html</code> → súbelo a tu repositorio GitHub Pages.</li>
+          <li><strong>Crea un Proyecto</strong> si vas a seguir desarrollando la app en varias sesiones: sube el <code>index.html</code> como archivo de referencia para que Claude mantenga la coherencia del código.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Artefacto HTML educativo <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>claude-artefacto-ejercicios.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ARTEFACTO HTML EDUCATIVO CON CLAUDE</span>
+
+Actúa como desarrollador frontend experto en educación.
+
+Crea un artefacto HTML completo (un único archivo, sin dependencias
+externas) que sea una aplicación web de ejercicios tipo test sobre
+[TEMA: ej. "tipos de datos en Python" / "álgebra booleana" / "Git"].
+
+<span class="hl">REQUISITOS FUNCIONALES:</span>
+- Mínimo 8 preguntas de opción múltiple (3-4 opciones cada una).
+- Feedback inmediato: verde si correcto, rojo si no,
+  con explicación breve de la respuesta correcta.
+- Barra de progreso (pregunta X de 8).
+- Pantalla de resultados final con puntuación y botón "Repetir".
+- Orden de preguntas aleatorio en cada intento.
+
+<span class="hl">REQUISITOS DE DISEÑO:</span>
+- Dark mode (fondo #0d1117, acentos en azul #58a6ff).
+- Tipografía sans-serif limpia. Totalmente responsive.
+- Sin librerías externas: solo HTML, CSS y JavaScript vanilla.
+
+<span class="hl">REQUISITOS DE CÓDIGO:</span>
+- Comentado en español.
+- Preguntas en un array JSON al inicio del script (fácil de editar).
+- Al terminar, indica cómo añadir nuevas preguntas al array.</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Configuración de Proyecto en Claude <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>claude-proyecto-instrucciones.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># INSTRUCCIONES PERSONALIZADAS DEL PROYECTO CLAUDE</span>
+<span class="cmt"># Pega este texto en "Instrucciones del proyecto" al crearlo</span>
+
+Eres mi asistente técnico para el proyecto: [NOMBRE DEL PROYECTO].
+
+<span class="hl">Contexto:</span>
+[Describe en 2-3 líneas de qué va el proyecto. Ej: "Estoy
+desarrollando una app web de gestión de tareas en HTML/CSS/JS
+para el proyecto final de 2º de Bachillerato TIC."]
+
+<span class="hl">Archivos adjuntos de referencia:</span>
+- [index.html]: código base actual de la aplicación.
+- [guia-estilo.md]: paleta de colores y tipografías a usar.
+- [rubrica.pdf]: criterios de evaluación del proyecto.
+
+<span class="hl">Normas de trabajo:</span>
+- Mantén el estilo de código de los archivos adjuntos.
+- Comenta el código en español.
+- Si propones un cambio que rompe funcionalidad existente,
+  avísame antes de implementarlo.
+- Genera siempre código como artefacto HTML completo y funcional,
+  no como fragmento aislado.
+
+<span class="hl">Modo de respuesta:</span>
+Respuestas técnicas y directas. Sin introducciones innecesarias.
+Cuando detectes un error en mi código, explícame el porqué
+antes de dar la solución.</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">🧠 Quiz — Claude: Artefactos y Proyectos <span class="tag tag-comparativa">Test</span></div>
+        <div id="quiz-claude">
+          <div class="quiz-q">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">1. ¿Qué es un Artefacto en Claude?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Un archivo adjunto que el usuario sube al chat</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Un output renderizado en tiempo real (web, código, doc) en la ventana lateral del chat</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Un tipo de prompt especializado para generación de imágenes</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">2. Estás desarrollando tu proyecto web en varias sesiones. ¿Qué función de Claude usas para que "recuerde" el código base entre sesiones?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Empezar un chat nuevo y pegar el código al inicio cada vez</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Crear un Proyecto con el código base como archivo de referencia</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Usar el historial de conversaciones de Claude</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">3. Generas un artefacto HTML con Claude y quieres publicarlo en GitHub Pages. ¿Cuál es el paso correcto?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Copiar el texto de la respuesta y guardarlo como .txt</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Hacer captura de pantalla del artefacto y subirla</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Descargar el artefacto como index.html y subirlo al repositorio</div>
+            </div>
+          </div>
+          <div id="quiz-claude-score" style="display:none;"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

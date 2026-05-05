@@ -1,0 +1,107 @@
+<!-- ============================================================
+     mod07-visual.html — Organización Visual / GitMind
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Organización Visual · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 07</div>
+        <h1 class="section-title">Organización Visual</h1>
+        <p class="section-subtitle">Mapas mentales y diagramas con GitMind.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://gitmind.com" target="_blank">GitMind</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Mapa mental · Diagrama de flujo</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Colaboración en tiempo real</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p><strong>GitMind</strong> es una herramienta de mapas mentales que incorpora IA generativa para transformar texto en estructuras visuales jerárquicas. El flujo es: <em>tema o texto → análisis semántico → árbol de nodos → exportación</em>.</p>
+        <p>La utilidad pedagógica reside en la <strong>externalización cognitiva</strong>: la IA extrae las relaciones entre conceptos que un alumno podría tardar horas en mapear manualmente, liberando tiempo para el análisis crítico.</p>
+        <div class="callout callout-tip" style="margin-top:12px;">
+          <span class="callout-icon">💡</span>
+          <p>GitMind permite <strong>edición colaborativa en tiempo real</strong>. Ideal para que distintos grupos expandan ramas diferentes del mismo mapa en clase.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — GitMind con IA <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Crea cuenta gratuita</strong> en <a href="https://gitmind.com" target="_blank">gitmind.com</a> con tu cuenta Google.</li>
+          <li><strong>"Nuevo" → "Generar con IA".</strong> Elige: Mapa Mental o Diagrama de Flujo.</li>
+          <li><strong>Introduce el topic o pega un texto.</strong> GitMind extrae nodos automáticamente del texto que pegues.</li>
+          <li><strong>Revisa la estructura.</strong> Verifica que las relaciones padre-hijo tengan sentido lógico.</li>
+          <li><strong>Edita:</strong> Tab = subnodo, Enter = mismo nivel. Cambia el tema visual para mejorar la legibilidad.</li>
+          <li><strong>Activa el modo "Presentación"</strong> para usarlo directamente en clase proyectado.</li>
+          <li><strong>Exporta</strong> en PNG, PDF o comparte el enlace público para entregar.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Estructura para GitMind <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>mindmap-structure-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ESTRUCTURA PARA MAPA MENTAL (GitMind)</span>
+<span class="cmt"># Úsalo en ChatGPT/Gemini para obtener la jerarquía y luego pégala en GitMind</span>
+
+Actúa como experto en cartografía conceptual y didáctica.
+Genera la estructura jerárquica de un mapa mental sobre: <span class="hl">[TEMA]</span>
+
+Requisitos:
+- Nodo raíz: "[TEMA]"
+- Exactamente [4-6] ramas principales (nivel 1)
+- Cada rama: [3-4] subnodos (nivel 2)
+- Los subnodos importantes: [2] hojas (nivel 3)
+- Máximo 4 palabras por nodo
+
+Formato de salida (usa esta indentación exacta):
+[TEMA CENTRAL]
+├── Rama 1
+│   ├── Subnodo 1.1
+│   │   └── Detalle 1.1.1
+│   └── Subnodo 1.2
+├── Rama 2
+[continúa el patrón...]
+
+Al final, añade 3 "relaciones cruzadas" entre nodos de distintas
+ramas que aporten valor conceptual.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

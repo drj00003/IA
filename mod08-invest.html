@@ -1,0 +1,125 @@
+<!-- ============================================================
+     mod08-invest.html — Investigación: Consensus + Inciteful
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Investigación · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 08</div>
+        <h1 class="section-title">Investigación con IA</h1>
+        <p class="section-subtitle">Consensus e Inciteful: búsqueda académica aumentada.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://consensus.app" target="_blank">Consensus</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://inciteful.xyz" target="_blank">Inciteful</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Literatura académica · Grafo de citas · Peer review</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p><strong>Consensus</strong> procesa más de 200 millones de papers científicos. A diferencia de Google Scholar, la IA sintetiza el <em>consenso científico</em> sobre una pregunta de investigación y lo presenta con porcentajes de acuerdo entre estudios: "el 78% de los estudios afirma que X".</p>
+        <p><strong>Inciteful</strong> trabaja con el <strong>grafo de citas</strong>: dado un paper de partida, mapea los artículos que lo citan y los que cita, permitiendo descubrir el estado del arte de un campo de forma visual y no lineal.</p>
+        <div class="callout callout-warn" style="margin-top:12px;">
+          <span class="callout-icon">⚠️</span>
+          <p><strong>Pensamiento crítico obligatorio:</strong> Consensus resume estudios pero no los reemplaza. Verifica siempre el tamaño de muestra, año y metodología antes de citar cualquier paper.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — Consensus + Inciteful <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Abre <a href="https://consensus.app" target="_blank">consensus.app</a></strong> y formula tu pregunta en inglés. Las preguntas tipo "Does X cause Y?" o "Is X effective for Z?" funcionan mejor que temas genéricos.</li>
+          <li><strong>Analiza el Consensus Meter:</strong> porcentaje de estudios que apoyan / contradicen / son neutros sobre tu hipótesis.</li>
+          <li><strong>Selecciona 2-3 papers relevantes.</strong> Haz clic en el título para ver abstract, año, revista y citas recibidas.</li>
+          <li><strong>Copia el DOI o título del paper más influyente</strong> y abre <a href="https://inciteful.xyz" target="_blank">inciteful.xyz</a>.</li>
+          <li><strong>Pégalo en Inciteful.</strong> Observa el grafo de citas. Los nodos con más conexiones son los papers fundacionales del campo.</li>
+          <li><strong>Exporta la lista</strong> de papers relacionados como bibliografía base para tu investigación.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Síntesis de investigación <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>research-synthesis-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — SÍNTESIS DE INVESTIGACIÓN ACADÉMICA</span>
+
+Actúa como investigador académico senior en [campo].
+
+He encontrado los siguientes papers en Consensus sobre:
+"[pregunta de investigación]"
+
+[Pega aquí títulos, autores y abstracts de los 3-5 papers]
+
+Tu tarea:
+1. <span class="hl">SÍNTESIS:</span> Estado actual del conocimiento en 150 palabras máx.
+2. <span class="hl">CONVERGENCIAS:</span> Puntos donde coincide la mayoría de estudios.
+3. <span class="hl">DIVERGENCIAS:</span> Dónde hay contradicción o falta de consenso.
+4. <span class="hl">GAPS:</span> Aspectos no estudiados suficientemente.
+5. <span class="hl">CITA APA7:</span> Cita en APA7 para cada paper.
+
+Nivel: técnico pero accesible para un alumno de bachillerato.
+Idioma: español.</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">🧠 Quiz — Investigación con IA <span class="tag tag-comparativa">Test</span></div>
+        <div id="quiz-invest">
+          <div class="quiz-q">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">1. ¿Cuál es la diferencia clave entre Consensus y Google Scholar?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Consensus indexa más papers que Scholar</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Consensus sintetiza el consenso científico con porcentajes; Scholar solo lista resultados</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Scholar usa IA y Consensus no</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">2. En Inciteful, los nodos del grafo con más conexiones representan…</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Los papers más recientes del campo</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Los papers más influyentes y fundacionales del campo</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Los papers con mejor puntuación de acceso abierto</div>
+            </div>
+          </div>
+          <div id="quiz-invest-score" style="display:none;"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
+
+

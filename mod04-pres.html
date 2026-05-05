@@ -1,0 +1,108 @@
+<!-- ============================================================
+     mod04-pres.html — Generación de Presentaciones
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Presentaciones · IA Bachillerato TIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="overlay"></div>
+<header id="top-bar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo">⚡ <span>IA</span>&nbsp;·&nbsp;Bachillerato TIC</div>
+  <span class="badge-2bach">2º Bachillerato · TIC</span>
+</header>
+<div id="layout">
+  <nav id="sidebar"></nav>
+  <main id="content">
+    <div class="section-hero">
+      <img src="" alt="" onerror="this.style.display='none'"/>
+      <div class="section-hero-gradient"></div>
+      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="section-hero-content">
+        <div class="section-number">MÓDULO 04</div>
+        <h1 class="section-title">Generación de Presentaciones</h1>
+        <p class="section-subtitle">Flujos de trabajo con Gamma y PowerPoint AI.</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="ficha-tecnica">
+        <h3>📋 Ficha Técnica</h3>
+        <div class="tool-grid">
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://gamma.app" target="_blank">Gamma.app</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://www.microsoft.com/microsoft-365" target="_blank">PowerPoint + Copilot</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Outline → Deck · Diseño automático</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
+        <p><strong>Gamma</strong> transforma un esquema textual (outline) en una presentación completa con diseño, tipografías e imágenes. El flujo es: <em>Prompt → Outline generado → Deck editado → Exportación</em>.</p>
+        <p><strong>PowerPoint + Copilot</strong> (Microsoft 365) permite generar slides desde un documento Word, refinar contenido con prompts dentro de la app y auto-diseñar layouts con Designer. Requiere licencia M365.</p>
+        <div class="callout callout-tip" style="margin-top:12px;">
+          <span class="callout-icon">💡</span>
+          <p>El error más común es pedir "haz una presentación sobre X" sin contexto. Especifica siempre: audiencia, duración, número de slides y tono. Cuanto más específico, más utilizables serán las diapositivas.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Práctica Guiada — Gamma <span class="tag tag-practica">Práctica</span></div>
+        <ol class="steps">
+          <li><strong>Crea cuenta gratuita</strong> en <a href="https://gamma.app" target="_blank">gamma.app</a>. El plan free incluye 400 créditos iniciales.</li>
+          <li><strong>"Generar" → "Presentación" → "Generar desde un prompt".</strong></li>
+          <li><strong>Introduce el prompt detallado</strong> (usa la estructura del Prompt Maestro). Gamma generará primero un outline editable.</li>
+          <li><strong>Revisa y edita el outline</strong> antes de generar el deck. Este paso es crítico: añade, elimina o reordena secciones según necesites.</li>
+          <li><strong>Selecciona el tema visual</strong> (paleta + tipografía) y genera el deck completo.</li>
+          <li><strong>Edita slide por slide:</strong> haz clic en cualquier elemento. Pide a la IA del panel lateral que "reescriba este párrafo en tono más técnico".</li>
+          <li><strong>Exporta</strong> en PDF o PowerPoint (.pptx) para entregar o seguir editando.</li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Prompt Maestro — Gamma <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>gamma-presentation-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO PARA GAMMA.APP</span>
+
+Crea una presentación profesional sobre [TEMA].
+
+Detalles:
+- Audiencia: [estudiantes de bachillerato / clientes / directivos]
+- Duración estimada: [10 minutos]
+- Número de slides: [8-10]
+- Tono: [formal y técnico / divulgativo / motivador]
+- Idioma: español
+
+Estructura requerida:
+1. Portada con título impactante y subtítulo
+2. Índice / Agenda
+3. [Sección 1 — concepto clave]
+4. [Sección 2 — datos o estadísticas]
+5. [Sección 3 — ejemplos o casos de uso]
+6. [Sección 4 — ventajas y limitaciones]
+7. Conclusiones en 3 puntos clave
+8. Slide de cierre con llamada a la acción
+
+Estilo: moderno, minimalista, con iconos y datos visualizados.
+Incluye una imagen relevante por slide siempre que sea posible.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
+
+
