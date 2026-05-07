@@ -104,6 +104,108 @@ Si no hay contexto externo, describe el escenario con detalle.]
         </div>
       </div>
 
+      <!-- EJEMPLO REAL -->
+      <div class="block">
+        <div class="block-title">Ejemplo real resuelto <span class="tag tag-practica">Ejemplo</span></div>
+        <p>A continuación tienes el Prompt Maestro R-P-C aplicado a una tarea concreta de clase. Observa cómo cada sección del template se traduce en instrucciones precisas:</p>
+
+        <!-- Comparación visual: template → ejemplo -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px;">
+
+          <!-- Columna izquierda: el template -->
+          <div style="background:rgba(88,166,255,0.05); border:1px solid rgba(88,166,255,0.2); border-radius:var(--radius); padding:16px;">
+            <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--cyan); font-weight:600; margin-bottom:10px;">📋 Template genérico</div>
+            <p style="font-size:0.82rem; line-height:1.8; font-family:var(--mono); color:var(--text-dim);">
+              <span style="color:var(--accent-gold);">ROL:</span><br>
+              Actúa como [perfil experto].<br>
+              Tu tono debe ser [estilo].<br><br>
+              <span style="color:var(--accent-gold);">PROCESO:</span><br>
+              Tu tarea es [verbo + tarea].<br>
+              Formato: [tipo de salida].<br>
+              Extensión máxima: [límite].<br><br>
+              <span style="color:var(--accent-gold);">CONTEXTO:</span><br>
+              [Situación, datos o texto relevante].<br><br>
+              <span style="color:var(--green-light);">RESTRICCIONES:</span><br>
+              - Responde en español.<br>
+              - Sin introducciones.<br>
+              - Indica si algo es incierto.
+            </p>
+          </div>
+
+          <!-- Columna derecha: el ejemplo real -->
+          <div style="background:rgba(46,160,67,0.05); border:1px solid rgba(46,160,67,0.2); border-radius:var(--radius); padding:16px;">
+            <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-light); font-weight:600; margin-bottom:10px;">✅ Ejemplo aplicado</div>
+            <p style="font-size:0.82rem; line-height:1.8; font-family:var(--mono); color:var(--text-dim);">
+              <span style="color:var(--green-light);">ROL:</span><br>
+              Actúa como profesor de Historia de España<br>
+              de bachillerato. Tono: claro y académico.<br><br>
+              <span style="color:var(--green-light);">PROCESO:</span><br>
+              Resume las causas de la Guerra Civil española.<br>
+              Formato: lista numerada. Máximo 5 puntos,<br>
+              2 frases cada uno.<br><br>
+              <span style="color:var(--green-light);">CONTEXTO:</span><br>
+              El alumno tiene 17 años y prepara la EVAU.<br>
+              Debe distinguir causas políticas, económicas<br>
+              y sociales.<br><br>
+              <span style="color:var(--accent-gold);">RESTRICCIONES:</span><br>
+              - Solo en español.<br>
+              - Sin introducción ni conclusión.<br>
+              - Indica si alguna causa es debatida.
+            </p>
+          </div>
+        </div>
+
+        <!-- El prompt completo listo para copiar -->
+        <p style="margin-top:20px; margin-bottom:6px;">El prompt completo, listo para copiar y probar en cualquier chatbot:</p>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>ejemplo-rpc-historia.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="hl">ROL:</span>
+Actúa como un profesor de Historia de España de 2º de Bachillerato.
+Tu tono debe ser claro, riguroso y académico, sin ser pedante.
+
+<span class="hl">PROCESO:</span>
+Tu tarea es resumir las principales causas de la Guerra Civil española
+(1936-1939) en una lista numerada.
+El formato debe ser: lista numerada del 1 al 5.
+Cada punto debe tener un título en negrita y un máximo de 2 frases
+de desarrollo. No incluyas más de 5 causas.
+
+<span class="hl">CONTEXTO:</span>
+El lector es un alumno de 17 años que prepara la EVAU en Andalucía.
+Necesita distinguir con claridad entre causas de tipo político,
+económico y social, ya que la pregunta de examen suele pedir
+esa clasificación. El nivel de detalle debe ser el de un apunte
+de clase, no el de un artículo académico.
+
+<span class="grn">RESTRICCIONES:</span>
+- Responde únicamente en español.
+- No incluyas introducción, conclusión ni despedida.
+- Si existe debate historiográfico sobre alguna causa,
+  indícalo con una nota breve entre paréntesis.</div>
+        </div>
+
+        <!-- Respuesta esperada -->
+        <div style="margin-top:18px; background:var(--bg-hover); border:1px solid var(--border); border-left:3px solid var(--accent-gold); border-radius:var(--radius); padding:16px;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent-gold); font-weight:600; margin-bottom:12px;">💬 Respuesta típica de un chatbot al prompt anterior</div>
+          <ol style="list-style:decimal; padding-left:18px; color:var(--text-muted); font-size:0.85rem; line-height:1.8;">
+            <li style="margin-bottom:10px;"><strong style="color:var(--text-primary);">Crisis del sistema político de la Restauración.</strong> El bipartidismo caciquil estaba agotado y no era capaz de integrar a los nuevos movimientos obreros y nacionalistas. La dictadura de Primo de Rivera (1923-1930) aceleró su descrédito.</li>
+            <li style="margin-bottom:10px;"><strong style="color:var(--text-primary);">Conflictividad social y auge del movimiento obrero.</strong> La enorme desigualdad entre terratenientes y jornaleros —especialmente en Andalucía y Extremadura— generó tensión constante. Las huelgas y la violencia de clase se intensificaron durante la II República.</li>
+            <li style="margin-bottom:10px;"><strong style="color:var(--text-primary);">Polarización política entre izquierda y derecha.</strong> El triunfo del Frente Popular en febrero de 1936 y la respuesta de las derechas radicalizaron el debate político hasta hacerlo irresoluble por vías democráticas. <em>(Causa con debate: algunos historiadores enfatizan más la responsabilidad de unos u otros actores.)</em></li>
+            <li style="margin-bottom:10px;"><strong style="color:var(--text-primary);">El problema regional y los nacionalismos.</strong> Las demandas de autonomía de Cataluña y el País Vasco generaron una fuerte resistencia en sectores militares y conservadores que veían en ellas una amenaza a la unidad de España.</li>
+            <li style="margin-bottom:10px;"><strong style="color:var(--text-primary);">La intervención del ejército y la conspiración militar.</strong> Un sector del ejército, con Franco a la cabeza, planificó el golpe de Estado de julio de 1936 ante lo que consideraba una situación de desorden y riesgo revolucionario.</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-tip" style="margin-top:16px;">
+          <span class="callout-icon">🎯</span>
+          <p><strong>Fíjate en la diferencia:</strong> sin la técnica R-P-C, un prompt como "cuéntame las causas de la Guerra Civil" devuelve una respuesta genérica de Wikipedia. Con R-P-C obtienes exactamente el nivel, el formato y el enfoque que necesitas para estudiar la EVAU.</p>
+        </div>
+      </div>
+
       <div class="block">
         <div class="block-title">🧠 Quiz — El Prompt <span class="tag tag-comparativa">Test</span></div>
         <div id="quiz-prompt">
