@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hojas de Cálculo · IA Bachillerato TIC</title>
+<title>Claude: Artefactos · IA Bachillerato TIC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
@@ -19,13 +19,13 @@
   <main id="content">
 
     <div class="section-hero">
-      <img src="img/mod05.jpg" alt="Hojas de Cálculo" onerror="this.style.display='none'"/>
+      <img src="img/mod02c.jpg" alt="Claude Artefactos" onerror="this.style.display='none'"/>
       <div class="section-hero-gradient"></div>
-      <div class="hero-img-hint">📷 img/mod05.jpg</div>
+      <div class="hero-img-hint">📷 img/mod02c.jpg</div>
       <div class="section-hero-content">
-        <div class="section-number">MÓDULO 05</div>
-        <h1 class="section-title">IA en Hojas de Cálculo</h1>
-        <p class="section-subtitle">Excel, Google Sheets, conectores y Skills para trabajar desde Drive sin salir del chat.</p>
+        <div class="section-number">02 · C — SUBSECCIÓN</div>
+        <h1 class="section-title">Claude — Artefactos, Proyectos y Skills</h1>
+        <p class="section-subtitle">Genera webs, apps y presentaciones. Conecta con el mundo real mediante Skills.</p>
       </div>
     </div>
 
@@ -34,302 +34,403 @@
       <div class="ficha-tecnica">
         <h3>📋 Ficha Técnica</h3>
         <div class="tool-grid">
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://sheets.google.com" target="_blank">Google Sheets</a></div>
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://www.microsoft.com/microsoft-365/excel" target="_blank">Microsoft Excel</a></div>
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://gemini.google.com" target="_blank">Gemini en Sheets</a></div>
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://claude.ai" target="_blank">Claude + Skill Sheets</a></div>
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://workspace.google.com/marketplace" target="_blank">Google Workspace Marketplace</a></div>
-          <div class="tool-chip"><span class="tool-icon">📄</span>Fórmulas · Apps Script · MCP · Add-ons</div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://claude.ai" target="_blank">claude.ai</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Artefactos: HTML, React, SVG, Markdown</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Proyectos: contexto persistente</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Skills: conexiones a servicios externos</div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Anthropic · Plan gratuito disponible</div>
         </div>
       </div>
 
-      <!-- BLOQUE 1: TEORÍA GENERAL -->
+      <!-- ══════════════════════════════
+           BLOQUE 1: ARTEFACTOS
+      ══════════════════════════════ -->
       <div class="block">
-        <div class="block-title">Niveles de IA en hojas de cálculo <span class="tag tag-teoria">Teoría</span></div>
-        <p>La inteligencia artificial se puede aplicar a las hojas de cálculo en <strong>tres niveles de profundidad</strong>, de menor a mayor integración:</p>
+        <div class="block-title">① Artefactos <span class="tag tag-teoria">Teoría</span></div>
+        <p>Un <strong>Artefacto</strong> es un output que Claude genera y renderiza en tiempo real en la ventana lateral del chat. No es texto plano: es el elemento en sí, funcional e interactivo. Puedes hablar con Claude mientras el artefacto se construye delante de ti y pedirle modificaciones en lenguaje natural.</p>
+        <div class="table-wrap" style="margin-top:14px;">
+          <table>
+            <thead><tr><th>Tipo</th><th>Qué genera</th><th>Caso de uso TIC</th></tr></thead>
+            <tbody>
+              <tr><td><strong>HTML/CSS/JS</strong></td><td>Páginas web completas, apps interactivas</td><td>Proyectos web, juegos educativos, portfolios</td></tr>
+              <tr><td><strong>React</strong></td><td>Componentes con estado dinámico</td><td>Simuladores, calculadoras, formularios</td></tr>
+              <tr><td><strong>SVG</strong></td><td>Gráficos vectoriales, diagramas</td><td>Diagramas de flujo, mapas conceptuales</td></tr>
+              <tr><td><strong>Markdown</strong></td><td>Documentos estructurados con formato</td><td>Memorias, README, guiones de presentación</td></tr>
+              <tr><td><strong>Código</strong></td><td>Python, JS, SQL con sintaxis resaltada</td><td>Scripts, consultas, funciones reutilizables</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-tip" style="margin-top:14px;">
+          <span class="callout-icon">💡</span>
+          <p><strong>Flujo de trabajo:</strong> pides el artefacto → Claude lo genera en la ventana lateral → lo editas con instrucciones en el chat → lo descargas como <code>index.html</code> → lo subes a GitHub Pages.</p>
+        </div>
+
+        <div class="block-title" style="margin-top:20px;">Markdown → Presentaciones con conectores <span class="tag tag-practica">Práctica</span></div>
+        <p><strong>Markdown</strong> es un lenguaje de marcado ligero que usa símbolos de texto (<code>#</code>, <code>**</code>, <code>-</code>, <code>---</code>) para dar formato a documentos sin necesidad de un editor visual. Es el estándar en GitHub, Notion, Obsidian y decenas de herramientas educativas.</p>
+        <p>Su potencia en presentaciones reside en que varias plataformas aceptan Markdown como fuente para generar slides de forma automática. El flujo es: <strong>Claude genera el Markdown → tú lo pegas en el conector → el conector produce la presentación visual.</strong></p>
+
         <div class="table-wrap" style="margin-top:12px;">
           <table>
-            <thead><tr><th>Nivel</th><th>Qué hace la IA</th><th>Herramienta</th><th>Requiere</th></tr></thead>
+            <thead><tr><th>Conector</th><th>Cómo usa el Markdown</th><th>Resultado</th></tr></thead>
             <tbody>
               <tr>
-                <td><span class="badge badge-free">1 — Asistente externo</span></td>
-                <td>Genera fórmulas y scripts que copias y pegas manualmente</td>
-                <td>ChatGPT, Gemini, Claude (chat)</td>
-                <td>Solo cuenta gratuita</td>
+                <td><strong><a href="https://gamma.app" target="_blank">Gamma</a></strong></td>
+                <td>Pega el Markdown en "Importar texto" → genera slides automáticamente</td>
+                <td>Presentación con diseño IA, imágenes y animaciones</td>
               </tr>
               <tr>
-                <td><span class="badge badge-both">2 — IA integrada</span></td>
-                <td>Panel lateral dentro de la hoja que analiza datos y genera contenido</td>
-                <td>Gemini en Sheets, Copilot en Excel</td>
-                <td>Cuenta Google / M365</td>
+                <td><strong><a href="https://marp.app" target="_blank">Marp</a></strong></td>
+                <td>Archivo <code>.md</code> con separadores <code>---</code> entre slides</td>
+                <td>PDF o HTML con diseño limpio y controlable por CSS</td>
               </tr>
               <tr>
-                <td><span class="badge badge-pro">3 — Conector / Skill</span></td>
-                <td>Claude lee y escribe en la hoja directamente desde el chat sin copiar nada</td>
-                <td>Claude + Skill Google Sheets (MCP)</td>
-                <td>Skill activada en Claude</td>
+                <td><strong><a href="https://revealjs.com" target="_blank">Reveal.js</a></strong></td>
+                <td>Markdown embebido en HTML con separadores de diapositiva</td>
+                <td>Presentación web interactiva con transiciones</td>
+              </tr>
+              <tr>
+                <td><strong><a href="https://slides.com" target="_blank">Slides.com</a></strong></td>
+                <td>Importación directa de Markdown por bloques</td>
+                <td>Deck online colaborativo y embebible</td>
               </tr>
             </tbody>
           </table>
         </div>
+
         <div class="callout callout-info" style="margin-top:14px;">
           <span class="callout-icon">ℹ️</span>
-          <p>Sin acceso a Copilot (de pago) o Gemini avanzado, el <strong>nivel 1</strong> sigue siendo enormemente potente: describes el problema en lenguaje natural, pegas una muestra de datos y obtienes la fórmula exacta o el script completo de Apps Script.</p>
+          <p><strong>¿Por qué Markdown + Claude es más potente que usar Gamma directamente?</strong> Porque Claude puede generar el contenido con mucho más control sobre el texto, la estructura pedagógica y el nivel de detalle. Gamma es excelente para el diseño visual; Claude es superior para el contenido técnico. Combinados son imbatibles.</p>
+        </div>
+
+        <p style="margin-top:14px;">Ejemplo de Markdown para presentación (compatible con Marp y Gamma):</p>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>presentacion-markdown.md</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># EJEMPLO DE MARKDOWN PARA PRESENTACIÓN</span>
+<span class="cmt"># Compatible con Marp, Gamma (importar texto) y Reveal.js</span>
+
+<span class="hl">---</span>
+<span class="grn"># Inteligencia Artificial en el Aula</span>
+**2º Bachillerato TIC · IES [Tu Centro]**
+
+Curso 2024-2025
+
+<span class="hl">---</span>
+<span class="grn">## ¿Qué es un Modelo de Lenguaje?</span>
+
+- Predice el siguiente token más probable
+- Entrenado con billones de palabras
+- No "entiende": **calcula probabilidades**
+
+> "Entra basura, sale basura" — Principio del Prompt Engineering
+
+<span class="hl">---</span>
+<span class="grn">## La Técnica R-P-C</span>
+
+| Elemento | Pregunta | Ejemplo |
+|----------|----------|---------|
+| **Rol** | ¿Quién eres? | "Actúa como experto en…" |
+| **Proceso** | ¿Qué haces? | "Resume en 5 puntos…" |
+| **Contexto** | ¿Con qué? | "El texto es el siguiente…" |
+
+<span class="hl">---</span>
+<span class="grn">## Conclusión</span>
+
+1. El prompt es la interfaz humano-máquina
+2. Más contexto = mejores respuestas
+3. Documenta tus mejores prompts</div>
+        </div>
+
+        <div class="block-title" style="margin-top:20px;">Prompt Maestro — Presentación en Markdown <span class="tag tag-prompt">Prompt</span></div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>claude-markdown-presentacion.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — PRESENTACIÓN MARKDOWN CON CLAUDE</span>
+
+Actúa como un diseñador instruccional experto en comunicación técnica.
+
+Genera una presentación completa en formato Markdown compatible
+con [Marp / Gamma / Reveal.js] sobre el tema: [TEMA].
+
+Requisitos de estructura:
+- [8-12] diapositivas separadas por líneas ---
+- Slide 1: Portada con título, subtítulo y fecha
+- Slides 2-3: Contexto y motivación del tema
+- Slides 4-8: Desarrollo con subtemas (una idea principal por slide)
+- Slide 9: Comparativa o tabla resumen
+- Slide 10: Conclusiones en 3 puntos clave
+- Slide 11: Preguntas / debate
+- Slide 12: Bibliografía y recursos
+
+Formato por slide:
+- Máximo 5 ítems de lista por diapositiva
+- Usa **negrita** para los conceptos clave
+- Incluye al menos 2 tablas y 2 bloques de cita (> texto)
+- Añade una nota para el orador al final de cada slide
+  con el formato: <!-- Nota: texto de la nota -->
+
+Audiencia: alumnos de 2º Bachillerato TIC, nivel técnico medio.
+Idioma: español.</div>
         </div>
       </div>
 
-      <!-- BLOQUE 2: NIVEL 1 — ASISTENTE EXTERNO -->
+      <!-- ══════════════════════════════
+           BLOQUE 2: PROYECTOS
+      ══════════════════════════════ -->
       <div class="block">
-        <div class="block-title">① Asistente externo — Fórmulas con IA <span class="tag tag-practica">Práctica</span></div>
-        <ol class="steps">
-          <li><strong>Abre Google Sheets</strong> con tu tabla de datos (notas, ventas, resultados de experimento…).</li>
-          <li><strong>Abre Gemini o Claude en pestaña paralela.</strong> Describe la estructura de tu tabla: columnas, qué datos contiene, dónde empiezan los datos.</li>
-          <li><strong>Pide la fórmula en lenguaje natural:</strong> "Necesito una fórmula que calcule el promedio de B2:B30 solo si el valor de la columna C es mayor que 50 y la columna D no está vacía".</li>
-          <li><strong>Copia la fórmula generada</strong> y pégala en Sheets. Verifica el resultado con 2-3 casos que ya conozcas.</li>
-          <li><strong>Si hay error,</strong> copia el mensaje de error exacto de Sheets y pégalo en el chat. La IA corregirá la fórmula.</li>
-          <li><strong>Pide el script completo</strong> si la tarea es repetitiva: "Conviértelo en un script de Apps Script que lo aplique automáticamente a toda la columna".</li>
+        <div class="block-title">② Proyectos — Memoria persistente entre sesiones <span class="tag tag-teoria">Teoría</span></div>
+        <p>Un <strong>Proyecto</strong> en Claude es un espacio de trabajo donde puedes subir archivos de referencia e instrucciones que Claude recordará en <em>todas</em> las conversaciones del proyecto, aunque no recuerde los chats anteriores. Es el equivalente a tener un asistente con su propio expediente de tu proyecto siempre abierto.</p>
+        <ol class="steps" style="margin-top:12px;">
+          <li><strong>Sube archivos de referencia</strong> que Claude leerá en todas las sesiones: apuntes, código base, rúbricas, guías de estilo, documentos de requisitos.</li>
+          <li><strong>Escribe instrucciones personalizadas</strong> que definen el rol y comportamiento de Claude para ese proyecto específico (equivalente al system prompt de las Gemas).</li>
+          <li><strong>Trabaja en conversaciones separadas</strong> dentro del proyecto: Claude mantiene el contexto de los archivos aunque cada chat sea nuevo.</li>
         </ol>
-
+        <div class="callout callout-info" style="margin-top:12px;">
+          <span class="callout-icon">ℹ️</span>
+          <p>Los Proyectos son ideales para trabajar durante semanas en un mismo trabajo: una investigación larga, el desarrollo iterativo de una app web, o la preparación sistemática de una asignatura.</p>
+        </div>
         <div class="code-block" style="margin-top:14px;">
           <div class="code-header">
             <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
-            <span>spreadsheet-formulas-prompt.txt</span>
+            <span>claude-proyecto-instrucciones.txt</span>
             <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
           </div>
-          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — GENERADOR DE FÓRMULAS Y SCRIPTS</span>
+          <div class="code-content"><span class="cmt"># INSTRUCCIONES PERSONALIZADAS DEL PROYECTO CLAUDE</span>
 
-Actúa como un experto en [Google Sheets / Microsoft Excel]
-y en automatización con [Apps Script / VBA].
+Eres mi asistente técnico para: [NOMBRE DEL PROYECTO].
 
-Mi hoja tiene esta estructura:
-- Columna A: [ej: "Nombres de alumnos"]
-- Columna B: [ej: "Nota examen 1 (0-10)"]
-- Columna C: [ej: "Nota examen 2 (0-10)"]
-- Columna D: [ej: "Asistencia (%)"]
-- Los datos empiezan en fila 2. Hay aproximadamente [X] filas.
+<span class="hl">Contexto:</span>
+[Ej: "Estoy desarrollando una app web de gestión de tareas
+en HTML/CSS/JS para el proyecto final de 2º Bachillerato TIC."]
 
-Necesito:
-1. [Tarea 1: ej: "Media ponderada: B vale 40%, C vale 60%"]
-2. [Tarea 2: ej: "Colorear en rojo si media < 5, verde si ≥ 7"]
-3. [Tarea 3: ej: "Columna E con 'Aprobado' / 'Suspenso' / 'MH'"]
+<span class="hl">Archivos adjuntos:</span>
+- [index.html]: código base actual.
+- [guia-estilo.md]: paleta de colores y tipografías.
+- [rubrica.pdf]: criterios de evaluación del proyecto.
 
-Requisitos:
-- Fórmulas listas para copiar y pegar (sintaxis exacta).
-- Explica brevemente qué hace cada función usada.
-- Si es necesario Apps Script, incluye el código completo
-  con comentarios en español y las instrucciones para ejecutarlo.</div>
+<span class="hl">Normas:</span>
+- Mantén el estilo de código de los archivos adjuntos.
+- Comenta el código en español.
+- Avísame antes de implementar cambios que rompan funcionalidad.
+- Genera código siempre como artefacto HTML completo, no fragmentos.
+- Respuestas técnicas y directas, sin introducciones innecesarias.</div>
         </div>
       </div>
 
-      <!-- BLOQUE 3: NIVEL 2 — IA INTEGRADA -->
+      <!-- ══════════════════════════════
+           BLOQUE 3: SKILLS
+      ══════════════════════════════ -->
       <div class="block">
-        <div class="block-title">② IA integrada — Gemini en Google Sheets <span class="tag tag-teoria">Teoría</span></div>
-        <p>Desde 2024, Google Sheets integra <strong>Gemini</strong> de forma nativa en el panel lateral. No necesitas salir de la hoja: seleccionas un rango, abres el panel y describes en lenguaje natural lo que quieres analizar o generar.</p>
-
-        <div class="card-grid" style="margin-top:12px;">
-          <div class="card">
-            <div class="card-icon">📊</div>
-            <div class="card-name">Análisis de datos</div>
-            <div class="card-desc">"Identifica las 3 anomalías más importantes en este rango de datos de ventas"</div>
-          </div>
-          <div class="card">
-            <div class="card-icon">📈</div>
-            <div class="card-name">Gráficos automáticos</div>
-            <div class="card-desc">"Crea un gráfico de líneas que compare las columnas B y C mes a mes"</div>
-          </div>
-          <div class="card">
-            <div class="card-icon">🔍</div>
-            <div class="card-name">Explicación de fórmulas</div>
-            <div class="card-desc">"Explícame qué hace esta fórmula: =ARRAYFORMULA(SI(B2:B>5,...))"</div>
-          </div>
-          <div class="card">
-            <div class="card-icon">📝</div>
-            <div class="card-name">Generación de contenido</div>
-            <div class="card-desc">"Rellena la columna F con una descripción de 20 palabras de cada producto de la columna A"</div>
-          </div>
-        </div>
-
-        <div class="callout callout-tip" style="margin-top:14px;">
-          <span class="callout-icon">💡</span>
-          <p>Para activar Gemini en Sheets: menú <strong>Extensiones → Gemini</strong> (o icono de estrella en la barra lateral derecha). Requiere cuenta de Google Workspace Education o cuenta personal con Gemini Advanced.</p>
-        </div>
-      </div>
-
-      <!-- BLOQUE 4: NIVEL 3 — CONECTORES Y SKILLS -->
-      <div class="block">
-        <div class="block-title">③ Conectores y Skills — Claude lee y escribe en tu Sheets <span class="tag tag-teoria">Teoría</span></div>
-        <p>El nivel más avanzado: Claude, mediante la <strong>Skill de Google Sheets</strong> (protocolo MCP), puede leer rangos de tu hoja, procesarlos y escribir los resultados directamente, todo desde el chat. No copias ni pegas nada.</p>
+        <div class="block-title">③ Skills — Claude conectado al mundo real <span class="tag tag-teoria">Teoría</span></div>
+        <p>Las <strong>Skills</strong> (también llamadas <em>integraciones</em> o <em>conectores MCP</em>) son extensiones que permiten a Claude interactuar con servicios externos en tiempo real: buscar en la web, leer y escribir en Google Drive, ejecutar código, consultar bases de datos o conectarse a APIs de terceros.</p>
+        <p>A diferencia de los artefactos, que son outputs estáticos, las Skills dan a Claude <strong>capacidad de acción</strong>: puede leer un documento de Drive, modificarlo y guardarlo, o buscar información actualizada en Internet que va más allá de su fecha de corte de conocimiento.</p>
 
         <div class="callout callout-warn" style="margin-top:12px;">
           <span class="callout-icon">⚠️</span>
-          <p>Esta funcionalidad requiere activar la integración en <strong>claude.ai → Configuración → Integraciones → Google Sheets</strong> y autorizar el acceso a tu Drive. Disponible en plan gratuito con límites de uso.</p>
+          <p>Las Skills con acceso a servicios externos requieren conceder permisos explícitos. Revisa siempre qué permisos solicita cada Skill antes de instalarla. Usa solo Skills de fuentes de confianza.</p>
         </div>
 
-        <!-- Add-ons de Google Workspace Marketplace -->
-        <div style="margin-top:18px;">
-          <div class="block-title" style="font-size:0.92rem; margin-bottom:12px;">Add-ons de IA para Google Sheets <span class="tag tag-comparativa">Conectores</span></div>
-          <p>Además de las Skills de Claude, el <a href="https://workspace.google.com/marketplace" target="_blank">Google Workspace Marketplace</a> ofrece add-ons que inyectan capacidades de IA directamente dentro de Sheets:</p>
+        <!-- Tipos de Skills -->
+        <div class="card-grid" style="margin-top:16px;">
+          <div class="card" style="border-color:rgba(88,166,255,0.3);">
+            <div class="card-icon">🔍</div>
+            <div class="card-name">Búsqueda web</div>
+            <div class="card-desc">Claude accede a resultados actualizados de Internet. Supera la limitación de fecha de corte del modelo.</div>
+          </div>
+          <div class="card" style="border-color:rgba(88,166,255,0.3);">
+            <div class="card-icon">📁</div>
+            <div class="card-name">Google Drive / Docs</div>
+            <div class="card-desc">Lee y escribe documentos de Drive directamente desde el chat sin copiar y pegar.</div>
+          </div>
+          <div class="card" style="border-color:rgba(88,166,255,0.3);">
+            <div class="card-icon">💻</div>
+            <div class="card-name">Ejecución de código</div>
+            <div class="card-desc">Claude ejecuta Python en un sandbox seguro y devuelve los resultados reales, no simulados.</div>
+          </div>
+          <div class="card" style="border-color:rgba(88,166,255,0.3);">
+            <div class="card-icon">📊</div>
+            <div class="card-name">Hojas de cálculo</div>
+            <div class="card-desc">Lee rangos de Google Sheets, analiza datos y escribe resultados sin salir del chat.</div>
+          </div>
+          <div class="card" style="border-color:rgba(210,153,34,0.3);">
+            <div class="card-icon">📅</div>
+            <div class="card-name">Google Calendar</div>
+            <div class="card-desc">Consulta eventos, crea entradas y organiza tu agenda de estudio desde el chat.</div>
+          </div>
+          <div class="card" style="border-color:rgba(210,153,34,0.3);">
+            <div class="card-icon">🐙</div>
+            <div class="card-name">GitHub</div>
+            <div class="card-desc">Lee repositorios, crea issues y gestiona pull requests directamente desde Claude.</div>
+          </div>
+        </div>
 
+        <!-- Skills útiles para alumnos -->
+        <div style="margin-top:20px;">
+          <div class="block-title" style="font-size:0.95rem;">Skills especialmente útiles para el aula <span class="tag tag-comparativa">Ejemplos</span></div>
           <div class="table-wrap" style="margin-top:10px;">
             <table>
-              <thead><tr><th>Add-on</th><th>Qué hace</th><th>Plan gratuito</th></tr></thead>
+              <thead><tr><th>Skill</th><th>Caso de uso educativo</th><th>Lo que permite hacer</th></tr></thead>
               <tbody>
                 <tr>
-                  <td><strong><a href="https://workspace.google.com/marketplace/app/gpt_for_sheets_and_docs/677318054654" target="_blank">GPT for Sheets and Docs</a></strong></td>
-                  <td>Añade funciones <code>=GPT()</code> y <code>=GPT_LIST()</code> que llaman a la API de OpenAI desde una celda</td>
-                  <td>⚠️ Limitado (requiere API key propia)</td>
+                  <td><strong>Web Search</strong></td>
+                  <td>Investigación actualizada para el TFB</td>
+                  <td>Buscar noticias, papers recientes y datos actuales sin salir de Claude</td>
                 </tr>
                 <tr>
-                  <td><strong><a href="https://workspace.google.com/marketplace/app/sheets_ai/1090988966866" target="_blank">Sheets AI</a></strong></td>
-                  <td>Genera fórmulas, limpia datos y crea contenido desde el panel lateral de Sheets</td>
-                  <td>✅ Plan gratuito con límite mensual</td>
+                  <td><strong>Google Drive</strong></td>
+                  <td>Trabajar apuntes directamente</td>
+                  <td>Leer un Doc de apuntes, resumirlo y escribir el resumen en otro Doc</td>
                 </tr>
                 <tr>
-                  <td><strong><a href="https://workspace.google.com/marketplace/app/formula_generator_gpt_powered/556469948166" target="_blank">Formula Generator</a></strong></td>
-                  <td>Describe en español la fórmula que necesitas y la genera lista para pegar</td>
-                  <td>✅ Gratuito (sin límite de uso básico)</td>
+                  <td><strong>Google Sheets</strong></td>
+                  <td>Análisis de datos de prácticas</td>
+                  <td>Leer resultados de experimentos, calcular estadísticas y graficar</td>
                 </tr>
                 <tr>
-                  <td><strong><a href="https://workspace.google.com/marketplace/app/bricks/1107366627547" target="_blank">Bricks</a></strong></td>
-                  <td>Crea dashboards, gráficos y análisis completos a partir de los datos de la hoja con un prompt</td>
-                  <td>✅ Plan gratuito disponible</td>
+                  <td><strong>Code Execution</strong></td>
+                  <td>Depuración de código Python en clase</td>
+                  <td>Ejecutar el código del alumno y mostrar el output real con errores</td>
+                </tr>
+                <tr>
+                  <td><strong>GitHub</strong></td>
+                  <td>Gestión del proyecto final</td>
+                  <td>Leer el README, crear issues de mejora y revisar el historial de commits</td>
+                </tr>
+                <tr>
+                  <td><strong>Brave Search</strong></td>
+                  <td>Búsqueda sin seguimiento</td>
+                  <td>Resultados de búsqueda privados, sin perfil de usuario asociado</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Instalar un Add-on -->
-        <div style="margin-top:18px;">
-          <div class="block-title" style="font-size:0.92rem; margin-bottom:10px;">Cómo instalar un Add-on en Google Sheets <span class="tag tag-practica">Práctica</span></div>
-          <ol class="steps">
-            <li><strong>Abre tu Google Sheets.</strong> En la barra de menú: <strong>Extensiones → Complementos → Obtener complementos</strong>.</li>
-            <li><strong>Busca el Add-on</strong> por nombre (ej: "Formula Generator"). Haz clic en "Instalar".</li>
-            <li><strong>Autoriza los permisos</strong> solicitados. Lee qué acceso pide antes de aceptar.</li>
-            <li><strong>Accede al Add-on</strong> desde <strong>Extensiones → [Nombre del Add-on] → Abrir</strong>. Aparece como panel lateral.</li>
+        <!-- Dónde descargar Skills -->
+        <div style="margin-top:20px;">
+          <div class="block-title" style="font-size:0.95rem;">Dónde encontrar Skills (repositorios externos) <span class="tag tag-teoria">Recursos</span></div>
+          <p>Las Skills de Claude se implementan mediante el protocolo <strong>MCP (Model Context Protocol)</strong>, un estándar abierto creado por Anthropic que cualquier desarrollador puede implementar. Esto significa que hay un ecosistema creciente de conectores creados por la comunidad.</p>
+
+          <div class="card-grid" style="margin-top:12px;">
+            <div class="card" style="border-color:rgba(88,166,255,0.3);">
+              <div class="card-icon">🐙</div>
+              <div class="card-name"><a href="https://github.com/modelcontextprotocol/servers" target="_blank">MCP Servers (oficial)</a></div>
+              <div class="card-desc">Repositorio oficial de Anthropic con servidores MCP mantenidos por el equipo. Incluye Google Drive, GitHub, Slack, Postgres, Brave Search y más. <strong>Punto de partida recomendado.</strong></div>
+            </div>
+            <div class="card" style="border-color:rgba(88,166,255,0.3);">
+              <div class="card-icon">📦</div>
+              <div class="card-name"><a href="https://glama.ai/mcp/servers" target="_blank">Glama MCP Registry</a></div>
+              <div class="card-desc">Directorio de la comunidad con más de 1.000 servidores MCP categorizados por función: productividad, datos, desarrollo, educación, etc.</div>
+            </div>
+            <div class="card" style="border-color:rgba(88,166,255,0.3);">
+              <div class="card-icon">🔭</div>
+              <div class="card-name"><a href="https://mcp.so" target="_blank">mcp.so</a></div>
+              <div class="card-desc">Buscador especializado en servidores MCP. Permite filtrar por categoría, popularidad y compatibilidad con Claude Desktop o claude.ai.</div>
+            </div>
+            <div class="card" style="border-color:rgba(210,153,34,0.3);">
+              <div class="card-icon">⭐</div>
+              <div class="card-name"><a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank">Awesome MCP Servers</a></div>
+              <div class="card-desc">Lista curada en GitHub con los servidores MCP más destacados, organizados por categoría. Actualizada por la comunidad semanalmente.</div>
+            </div>
+          </div>
+
+          <div class="callout callout-tip" style="margin-top:14px;">
+            <span class="callout-icon">💡</span>
+            <p><strong>Para empezar sin complicaciones:</strong> en <a href="https://claude.ai" target="_blank">claude.ai</a> ve a <strong>Configuración → Integraciones</strong> para activar las Skills disponibles directamente desde la interfaz web (Google Drive, Docs, búsqueda web). No necesitas instalar nada. Las Skills MCP avanzadas requieren Claude Desktop y algo más de configuración técnica.</p>
+          </div>
+        </div>
+
+        <!-- Práctica Skills -->
+        <div style="margin-top:20px;">
+          <div class="block-title" style="font-size:0.95rem;">Práctica — Flujo con Skills en el aula <span class="tag tag-practica">Práctica</span></div>
+          <ol class="steps" style="margin-top:10px;">
+            <li><strong>Activa la Skill de Google Drive</strong> en Configuración → Integraciones. Autoriza el acceso a tu Google Drive educativo.</li>
+            <li><strong>Crea un Doc de apuntes</strong> en Drive con el contenido de un tema de clase. Copia el enlace del Doc.</li>
+            <li><strong>En un nuevo chat de Claude,</strong> pega el enlace y escribe: "Lee este documento y genera un esquema de estudio en tres niveles de profundidad".</li>
+            <li><strong>Claude leerá el Doc directamente</strong> y generará el esquema como artefacto Markdown. No has copiado ni pegado nada.</li>
+            <li><strong>Pide que lo guarde:</strong> "Crea un nuevo Google Doc con el título 'Esquema Tema 5' y guarda el esquema en mi Drive".</li>
+            <li><strong>Combina con Web Search:</strong> "Busca las 3 noticias más recientes sobre [tema del apunte] y añádelas como sección 'Actualidad' al final del Doc".</li>
           </ol>
         </div>
-      </div>
-
-      <!-- BLOQUE 5: PRÁCTICA COMPLETA CON CLAUDE SKILL -->
-      <div class="block">
-        <div class="block-title">Práctica completa — Claude + Skill Sheets <span class="tag tag-practica">Práctica</span></div>
-        <p style="margin-bottom:14px;">Vamos a analizar los resultados de un experimento de clase directamente desde Claude, sin copiar ni pegar nada:</p>
-        <ol class="steps">
-          <li><strong>Crea una Sheets de prueba</strong> en Drive con datos ficticios: columna A = nombre del alumno, B = nota examen 1, C = nota examen 2, D = asistencia (%). Añade 15-20 filas.</li>
-          <li><strong>Activa la Skill de Google Sheets</strong> en claude.ai → Configuración → Integraciones. Autoriza el acceso.</li>
-          <li><strong>Copia el enlace</strong> de tu Sheets (botón "Compartir" → copiar enlace).</li>
-          <li><strong>En Claude,</strong> pega el enlace y usa el prompt de abajo. Claude leerá los datos directamente.</li>
-          <li><strong>Revisa los resultados</strong> que Claude escriba en la hoja. Comprueba que las fórmulas y valores son correctos.</li>
-          <li><strong>Itera:</strong> "Ahora crea una hoja nueva llamada 'Resumen' con solo los alumnos que tienen asistencia menor al 80%".</li>
-        </ol>
 
         <div class="code-block" style="margin-top:14px;">
           <div class="code-header">
             <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
-            <span>claude-skill-sheets-prompts.txt</span>
+            <span>claude-skills-prompts.txt</span>
             <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
           </div>
-          <div class="code-content"><span class="cmt"># PROMPTS MAESTROS — CLAUDE CON SKILL DE GOOGLE SHEETS</span>
-<span class="cmt"># Pega el enlace de tu Sheets al inicio de cada prompt</span>
+          <div class="code-content"><span class="cmt"># PROMPTS MAESTROS CON SKILLS ACTIVADAS</span>
 
-<span class="hl">── Análisis completo ──</span>
-Accede a esta Google Sheets: [URL]
-Lee todos los datos disponibles y dime:
-1. Cuántas filas de datos hay y qué columnas contiene.
-2. Media, mínimo y máximo de cada columna numérica.
-3. Las 3 filas con los valores más bajos en la columna B.
-4. Si hay celdas vacías o con valores anómalos, indícamelo.
+<span class="hl">── Con Google Drive ──</span>
+Lee el documento de Drive en este enlace: [URL]
+Resume el contenido en un esquema Markdown de 3 niveles.
+Luego crea un nuevo Doc en mi Drive llamado "Resumen [TEMA]"
+y guarda el esquema en él.
 
-<span class="hl">── Añadir columna calculada ──</span>
-En la Sheets: [URL]
-Añade una columna nueva llamada "Nota Final" en la primera
-columna vacía. La fórmula es:
-- Si asistencia (col D) < 50%: nota final = 0
-- Si no: nota final = media ponderada (B*0.4 + C*0.6)
-Aplícala a todas las filas con datos.
+<span class="hl">── Con Web Search + Drive ──</span>
+Busca las últimas noticias sobre [TEMA] de los últimos 30 días.
+Selecciona las 3 más relevantes para un alumno de bachillerato.
+Añade un apartado "Contexto actual" al Doc de Drive: [URL]
+con un párrafo por cada noticia (fuente + resumen de 2 líneas).
 
-<span class="hl">── Filtro y nueva hoja ──</span>
-En la Sheets: [URL]
-Crea una hoja nueva llamada "Suspensos".
-Copia en ella todas las filas donde la columna B sea menor
-que 5. Añade una fila de totales al final con la media
-de cada columna numérica.
+<span class="hl">── Con ejecución de código ──</span>
+Tengo este código Python que falla:
+[pega tu código aquí]
+Ejecútalo, muéstrame el error real y corrígelo.
+Explícame en 2 líneas qué estaba mal.
 
-<span class="hl">── Resumen ejecutivo ──</span>
-Lee los datos de: [URL]
-Genera un informe de texto (no modifiques la Sheets) con:
-- Resumen estadístico de los datos
-- 3 observaciones clave sobre los resultados
-- 2 recomendaciones de acción basadas en los datos</div>
+<span class="hl">── Con GitHub ──</span>
+Lee el repositorio: [URL del repo]
+Analiza el archivo README.md y el código principal.
+Dime: ¿qué hace bien? ¿qué mejorarías? ¿hay errores evidentes?
+Crea un issue en el repo con el título "Code Review" y
+el resumen de tus sugerencias.</div>
         </div>
       </div>
 
-      <!-- BLOQUE 6: APPS SCRIPT CON IA -->
+      <!-- Quiz actualizado -->
       <div class="block">
-        <div class="block-title">Apps Script generado por IA <span class="tag tag-practica">Práctica</span></div>
-        <p>Para tareas repetitivas o complejas que las fórmulas no pueden resolver, la IA genera el <strong>script completo de Apps Script</strong> (JavaScript que Google ejecuta en sus servidores) listo para copiar en el editor de scripts de Sheets.</p>
-        <div class="callout callout-info" style="margin-top:10px;">
-          <span class="callout-icon">ℹ️</span>
-          <p>Para abrir el editor: <strong>Extensiones → Apps Script</strong>. Pega el código generado por la IA, guarda y ejecuta con el botón ▶. La primera vez pedirá permisos de autorización.</p>
-        </div>
-
-        <div class="code-block" style="margin-top:14px;">
-          <div class="code-header">
-            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
-            <span>apps-script-prompt.txt</span>
-            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
-          </div>
-          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — APPS SCRIPT CON IA</span>
-
-Actúa como un desarrollador experto en Google Apps Script.
-
-Necesito un script para Google Sheets que haga lo siguiente:
-[Describe la automatización con detalle, ej:
-"Recorra todas las filas de la hoja 'Datos', calcule la media
-de las columnas B y C ponderada (B=40%, C=60%), escriba el
-resultado en la columna D, y coloree la celda en verde si
-el resultado es ≥ 5 o en rojo si es menor. Al finalizar,
-muestre un mensaje indicando cuántas filas procesó."]
-
-Requisitos del código:
-- Escrito en Google Apps Script (JavaScript para Sheets).
-- Comentado línea a línea en español.
-- Con manejo de errores: si una celda está vacía, sáltala.
-- Al final, añade instrucciones en comentarios sobre cómo
-  ejecutarlo y cómo asignarlo a un botón en la hoja.</div>
-        </div>
-      </div>
-
-      <!-- QUIZ -->
-      <div class="block">
-        <div class="block-title">🧠 Quiz — IA en Hojas de Cálculo <span class="tag tag-comparativa">Test</span></div>
-        <div id="quiz-hojas">
+        <div class="block-title">🧠 Quiz — Claude: Artefactos, Proyectos y Skills <span class="tag tag-comparativa">Test</span></div>
+        <div id="quiz-claude">
           <div class="quiz-q">
-            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">1. ¿Cuál es la diferencia entre usar ChatGPT para fórmulas y usar la Skill de Google Sheets de Claude?</p>
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">1. ¿Cuál es la diferencia entre un Artefacto y una Skill?</p>
             <div class="quiz-opts">
-              <div class="quiz-opt" onclick="answerQuiz(this,false)">ChatGPT genera fórmulas más avanzadas que Claude</div>
-              <div class="quiz-opt" onclick="answerQuiz(this,true)">Con la Skill, Claude lee y escribe en la hoja directamente; sin ella, tienes que copiar y pegar manualmente</div>
-              <div class="quiz-opt" onclick="answerQuiz(this,false)">No hay diferencia práctica, ambos acceden a Google Drive</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Los artefactos son de pago y las Skills son gratuitas</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Los artefactos son outputs generados (webs, código); las Skills conectan Claude con servicios externos para leer y actuar</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Son lo mismo, solo cambia el nombre según la versión de Claude</div>
             </div>
           </div>
           <div class="quiz-q" style="margin-top:16px;">
-            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">2. Quieres añadir funciones =GPT() directamente en las celdas de tu Sheets. ¿Qué necesitas instalar?</p>
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">2. Quieres que Claude lea tus apuntes de Drive y genere un resumen sin copiar y pegar. ¿Qué necesitas activar?</p>
             <div class="quiz-opts">
-              <div class="quiz-opt" onclick="answerQuiz(this,false)">La Skill de Google Sheets de Claude</div>
-              <div class="quiz-opt" onclick="answerQuiz(this,true)">El Add-on "GPT for Sheets and Docs" desde Google Workspace Marketplace</div>
-              <div class="quiz-opt" onclick="answerQuiz(this,false)">El panel lateral de Gemini integrado en Sheets</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Un Proyecto de Claude con los apuntes subidos manualmente</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">La Skill de Google Drive en Configuración → Integraciones</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Un artefacto Markdown con el contenido de los apuntes</div>
             </div>
           </div>
           <div class="quiz-q" style="margin-top:16px;">
-            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">3. ¿Dónde se pega y ejecuta un script de Apps Script generado por IA?</p>
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">3. ¿Qué repositorio externo oficial recoge los servidores MCP mantenidos por el propio equipo de Anthropic?</p>
             <div class="quiz-opts">
-              <div class="quiz-opt" onclick="answerQuiz(this,false)">En la consola del navegador (F12 → Consola)</div>
-              <div class="quiz-opt" onclick="answerQuiz(this,false)">En una celda de la hoja precedido por el símbolo =</div>
-              <div class="quiz-opt" onclick="answerQuiz(this,true)">En Extensiones → Apps Script → editor de código → botón ▶</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">glama.ai/mcp/servers</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">mcp.so</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">github.com/modelcontextprotocol/servers</div>
             </div>
           </div>
-          <div id="quiz-hojas-score" style="display:none;"></div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">4. Generas una presentación con Claude en Markdown y quieres diseño visual automático. ¿Qué herramienta es la mejor opción sin instalar nada?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Marp (requiere instalar extensión o CLI)</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Gamma (importa el Markdown en la web y aplica diseño IA)</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">Reveal.js (requiere editar HTML manualmente)</div>
+            </div>
+          </div>
+          <div id="quiz-claude-score" style="display:none;"></div>
         </div>
       </div>
 
