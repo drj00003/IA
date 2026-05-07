@@ -1,6 +1,3 @@
-<!-- ============================================================
-     mod05-hojas.html — Hojas de Cálculo con IA
-     ============================================================ -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,85 +17,325 @@
 <div id="layout">
   <nav id="sidebar"></nav>
   <main id="content">
+
     <div class="section-hero">
-      <img src="" alt="" onerror="this.style.display='none'"/>
+      <img src="img/mod05.jpg" alt="Hojas de Cálculo" onerror="this.style.display='none'"/>
       <div class="section-hero-gradient"></div>
-      <div class="hero-img-hint">📷 Reemplaza con tu imagen</div>
+      <div class="hero-img-hint">📷 img/mod05.jpg</div>
       <div class="section-hero-content">
         <div class="section-number">MÓDULO 05</div>
         <h1 class="section-title">IA en Hojas de Cálculo</h1>
-        <p class="section-subtitle">Excel y Google Sheets potenciados con inteligencia artificial.</p>
+        <p class="section-subtitle">Excel, Google Sheets, conectores y Skills para trabajar desde Drive sin salir del chat.</p>
       </div>
     </div>
+
     <div class="section-body">
 
       <div class="ficha-tecnica">
         <h3>📋 Ficha Técnica</h3>
         <div class="tool-grid">
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://sheets.google.com" target="_blank">Google Sheets + Gemini</a></div>
-          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://www.microsoft.com/microsoft-365/excel" target="_blank">Excel + Copilot</a></div>
-          <div class="tool-chip"><span class="tool-icon">📄</span>Fórmulas · Apps Script · VBA</div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://sheets.google.com" target="_blank">Google Sheets</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://www.microsoft.com/microsoft-365/excel" target="_blank">Microsoft Excel</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://gemini.google.com" target="_blank">Gemini en Sheets</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://claude.ai" target="_blank">Claude + Skill Sheets</a></div>
+          <div class="tool-chip"><span class="tool-icon">🔗</span><a href="https://workspace.google.com/marketplace" target="_blank">Google Workspace Marketplace</a></div>
+          <div class="tool-chip"><span class="tool-icon">📄</span>Fórmulas · Apps Script · MCP · Add-ons</div>
         </div>
       </div>
 
+      <!-- BLOQUE 1: TEORÍA GENERAL -->
       <div class="block">
-        <div class="block-title">Explicación Teórica <span class="tag tag-teoria">Teoría</span></div>
-        <p>La IA en hojas de cálculo opera en tres niveles: <strong>generación de fórmulas</strong> (describes en lenguaje natural lo que quieres calcular y la IA escribe la fórmula), <strong>análisis de datos</strong> (tendencias, anomalías, correlaciones) y <strong>automatización</strong> (scripts en Apps Script o VBA).</p>
-        <p>Sin acceso a Copilot (de pago), puedes usar <strong>ChatGPT o Gemini como asistente externo</strong>: describes el problema, pegas una muestra de datos y obtienes la fórmula lista para copiar.</p>
-        <div class="callout callout-info" style="margin-top:12px;">
+        <div class="block-title">Niveles de IA en hojas de cálculo <span class="tag tag-teoria">Teoría</span></div>
+        <p>La inteligencia artificial se puede aplicar a las hojas de cálculo en <strong>tres niveles de profundidad</strong>, de menor a mayor integración:</p>
+        <div class="table-wrap" style="margin-top:12px;">
+          <table>
+            <thead><tr><th>Nivel</th><th>Qué hace la IA</th><th>Herramienta</th><th>Requiere</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-free">1 — Asistente externo</span></td>
+                <td>Genera fórmulas y scripts que copias y pegas manualmente</td>
+                <td>ChatGPT, Gemini, Claude (chat)</td>
+                <td>Solo cuenta gratuita</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-both">2 — IA integrada</span></td>
+                <td>Panel lateral dentro de la hoja que analiza datos y genera contenido</td>
+                <td>Gemini en Sheets, Copilot en Excel</td>
+                <td>Cuenta Google / M365</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-pro">3 — Conector / Skill</span></td>
+                <td>Claude lee y escribe en la hoja directamente desde el chat sin copiar nada</td>
+                <td>Claude + Skill Google Sheets (MCP)</td>
+                <td>Skill activada en Claude</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-info" style="margin-top:14px;">
           <span class="callout-icon">ℹ️</span>
-          <p>Google Sheets integra <strong>Gemini</strong> de forma nativa (panel lateral → "Preguntar a Gemini"). Permite analizar el rango seleccionado, crear gráficos y explicar fórmulas existentes directamente en la hoja.</p>
+          <p>Sin acceso a Copilot (de pago) o Gemini avanzado, el <strong>nivel 1</strong> sigue siendo enormemente potente: describes el problema en lenguaje natural, pegas una muestra de datos y obtienes la fórmula exacta o el script completo de Apps Script.</p>
         </div>
       </div>
 
+      <!-- BLOQUE 2: NIVEL 1 — ASISTENTE EXTERNO -->
       <div class="block">
-        <div class="block-title">Práctica Guiada — Fórmulas con IA <span class="tag tag-practica">Práctica</span></div>
+        <div class="block-title">① Asistente externo — Fórmulas con IA <span class="tag tag-practica">Práctica</span></div>
         <ol class="steps">
-          <li><strong>Abre Google Sheets</strong> con una tabla de datos (notas de alumnos, ventas por mes…).</li>
-          <li><strong>Abre Gemini</strong> en pestaña paralela. Describe la estructura de tu tabla: columnas, filas, qué datos contiene.</li>
-          <li><strong>Pide la fórmula en lenguaje natural:</strong> "Necesito una fórmula que calcule el promedio de B2:B20 solo si el valor en columna C es mayor que 50".</li>
-          <li><strong>Copia la fórmula generada</strong> y pégala en Sheets. Verifica el resultado.</li>
-          <li><strong>Si hay errores,</strong> vuelve al chat y pega el mensaje de error exacto. La IA corregirá la fórmula.</li>
-          <li><strong>Genera un gráfico:</strong> selecciona el rango, activa el panel Gemini y pide "Crea un gráfico de barras comparando las columnas A y B".</li>
+          <li><strong>Abre Google Sheets</strong> con tu tabla de datos (notas, ventas, resultados de experimento…).</li>
+          <li><strong>Abre Gemini o Claude en pestaña paralela.</strong> Describe la estructura de tu tabla: columnas, qué datos contiene, dónde empiezan los datos.</li>
+          <li><strong>Pide la fórmula en lenguaje natural:</strong> "Necesito una fórmula que calcule el promedio de B2:B30 solo si el valor de la columna C es mayor que 50 y la columna D no está vacía".</li>
+          <li><strong>Copia la fórmula generada</strong> y pégala en Sheets. Verifica el resultado con 2-3 casos que ya conozcas.</li>
+          <li><strong>Si hay error,</strong> copia el mensaje de error exacto de Sheets y pégalo en el chat. La IA corregirá la fórmula.</li>
+          <li><strong>Pide el script completo</strong> si la tarea es repetitiva: "Conviértelo en un script de Apps Script que lo aplique automáticamente a toda la columna".</li>
         </ol>
-      </div>
 
-      <div class="block">
-        <div class="block-title">Prompt Maestro — Asistente de Fórmulas <span class="tag tag-prompt">Prompt</span></div>
-        <div class="code-block">
+        <div class="code-block" style="margin-top:14px;">
           <div class="code-header">
             <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
-            <span>spreadsheet-formula-prompt.txt</span>
+            <span>spreadsheet-formulas-prompt.txt</span>
             <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
           </div>
-          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — ASISTENTE DE HOJAS DE CÁLCULO</span>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — GENERADOR DE FÓRMULAS Y SCRIPTS</span>
 
-Actúa como un experto en [Google Sheets / Microsoft Excel].
+Actúa como un experto en [Google Sheets / Microsoft Excel]
+y en automatización con [Apps Script / VBA].
 
 Mi hoja tiene esta estructura:
 - Columna A: [ej: "Nombres de alumnos"]
-- Columna B: [ej: "Nota del examen (0-10)"]
-- Columna C: [ej: "Asistencia en porcentaje"]
-- Los datos empiezan en fila 2. Hay [X] filas de datos.
+- Columna B: [ej: "Nota examen 1 (0-10)"]
+- Columna C: [ej: "Nota examen 2 (0-10)"]
+- Columna D: [ej: "Asistencia (%)"]
+- Los datos empiezan en fila 2. Hay aproximadamente [X] filas.
 
-Necesito que hagas lo siguiente:
-1. [Tarea 1: ej: "Calcular la media de B solo si C > 80"]
-2. [Tarea 2: ej: "Marcar en rojo las celdas donde B < 5"]
-3. [Tarea 3: ej: "Crear columna D con 'Aprobado' o 'Suspenso'"]
+Necesito:
+1. [Tarea 1: ej: "Media ponderada: B vale 40%, C vale 60%"]
+2. [Tarea 2: ej: "Colorear en rojo si media < 5, verde si ≥ 7"]
+3. [Tarea 3: ej: "Columna E con 'Aprobado' / 'Suspenso' / 'MH'"]
 
 Requisitos:
-- Fórmulas listas para copiar y pegar.
-- Explica brevemente qué hace cada función.
-- Si necesitas Apps Script, incluye el código completo.
-- Usa sintaxis de [Google Sheets / Excel].</div>
+- Fórmulas listas para copiar y pegar (sintaxis exacta).
+- Explica brevemente qué hace cada función usada.
+- Si es necesario Apps Script, incluye el código completo
+  con comentarios en español y las instrucciones para ejecutarlo.</div>
         </div>
       </div>
 
-    </div>
+      <!-- BLOQUE 3: NIVEL 2 — IA INTEGRADA -->
+      <div class="block">
+        <div class="block-title">② IA integrada — Gemini en Google Sheets <span class="tag tag-teoria">Teoría</span></div>
+        <p>Desde 2024, Google Sheets integra <strong>Gemini</strong> de forma nativa en el panel lateral. No necesitas salir de la hoja: seleccionas un rango, abres el panel y describes en lenguaje natural lo que quieres analizar o generar.</p>
+
+        <div class="card-grid" style="margin-top:12px;">
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <div class="card-name">Análisis de datos</div>
+            <div class="card-desc">"Identifica las 3 anomalías más importantes en este rango de datos de ventas"</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📈</div>
+            <div class="card-name">Gráficos automáticos</div>
+            <div class="card-desc">"Crea un gráfico de líneas que compare las columnas B y C mes a mes"</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔍</div>
+            <div class="card-name">Explicación de fórmulas</div>
+            <div class="card-desc">"Explícame qué hace esta fórmula: =ARRAYFORMULA(SI(B2:B>5,...))"</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📝</div>
+            <div class="card-name">Generación de contenido</div>
+            <div class="card-desc">"Rellena la columna F con una descripción de 20 palabras de cada producto de la columna A"</div>
+          </div>
+        </div>
+
+        <div class="callout callout-tip" style="margin-top:14px;">
+          <span class="callout-icon">💡</span>
+          <p>Para activar Gemini en Sheets: menú <strong>Extensiones → Gemini</strong> (o icono de estrella en la barra lateral derecha). Requiere cuenta de Google Workspace Education o cuenta personal con Gemini Advanced.</p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 4: NIVEL 3 — CONECTORES Y SKILLS -->
+      <div class="block">
+        <div class="block-title">③ Conectores y Skills — Claude lee y escribe en tu Sheets <span class="tag tag-teoria">Teoría</span></div>
+        <p>El nivel más avanzado: Claude, mediante la <strong>Skill de Google Sheets</strong> (protocolo MCP), puede leer rangos de tu hoja, procesarlos y escribir los resultados directamente, todo desde el chat. No copias ni pegas nada.</p>
+
+        <div class="callout callout-warn" style="margin-top:12px;">
+          <span class="callout-icon">⚠️</span>
+          <p>Esta funcionalidad requiere activar la integración en <strong>claude.ai → Configuración → Integraciones → Google Sheets</strong> y autorizar el acceso a tu Drive. Disponible en plan gratuito con límites de uso.</p>
+        </div>
+
+        <!-- Add-ons de Google Workspace Marketplace -->
+        <div style="margin-top:18px;">
+          <div class="block-title" style="font-size:0.92rem; margin-bottom:12px;">Add-ons de IA para Google Sheets <span class="tag tag-comparativa">Conectores</span></div>
+          <p>Además de las Skills de Claude, el <a href="https://workspace.google.com/marketplace" target="_blank">Google Workspace Marketplace</a> ofrece add-ons que inyectan capacidades de IA directamente dentro de Sheets:</p>
+
+          <div class="table-wrap" style="margin-top:10px;">
+            <table>
+              <thead><tr><th>Add-on</th><th>Qué hace</th><th>Plan gratuito</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong><a href="https://workspace.google.com/marketplace/app/gpt_for_sheets_and_docs/677318054654" target="_blank">GPT for Sheets and Docs</a></strong></td>
+                  <td>Añade funciones <code>=GPT()</code> y <code>=GPT_LIST()</code> que llaman a la API de OpenAI desde una celda</td>
+                  <td>⚠️ Limitado (requiere API key propia)</td>
+                </tr>
+                <tr>
+                  <td><strong><a href="https://workspace.google.com/marketplace/app/sheets_ai/1090988966866" target="_blank">Sheets AI</a></strong></td>
+                  <td>Genera fórmulas, limpia datos y crea contenido desde el panel lateral de Sheets</td>
+                  <td>✅ Plan gratuito con límite mensual</td>
+                </tr>
+                <tr>
+                  <td><strong><a href="https://workspace.google.com/marketplace/app/formula_generator_gpt_powered/556469948166" target="_blank">Formula Generator</a></strong></td>
+                  <td>Describe en español la fórmula que necesitas y la genera lista para pegar</td>
+                  <td>✅ Gratuito (sin límite de uso básico)</td>
+                </tr>
+                <tr>
+                  <td><strong><a href="https://workspace.google.com/marketplace/app/bricks/1107366627547" target="_blank">Bricks</a></strong></td>
+                  <td>Crea dashboards, gráficos y análisis completos a partir de los datos de la hoja con un prompt</td>
+                  <td>✅ Plan gratuito disponible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Instalar un Add-on -->
+        <div style="margin-top:18px;">
+          <div class="block-title" style="font-size:0.92rem; margin-bottom:10px;">Cómo instalar un Add-on en Google Sheets <span class="tag tag-practica">Práctica</span></div>
+          <ol class="steps">
+            <li><strong>Abre tu Google Sheets.</strong> En la barra de menú: <strong>Extensiones → Complementos → Obtener complementos</strong>.</li>
+            <li><strong>Busca el Add-on</strong> por nombre (ej: "Formula Generator"). Haz clic en "Instalar".</li>
+            <li><strong>Autoriza los permisos</strong> solicitados. Lee qué acceso pide antes de aceptar.</li>
+            <li><strong>Accede al Add-on</strong> desde <strong>Extensiones → [Nombre del Add-on] → Abrir</strong>. Aparece como panel lateral.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- BLOQUE 5: PRÁCTICA COMPLETA CON CLAUDE SKILL -->
+      <div class="block">
+        <div class="block-title">Práctica completa — Claude + Skill Sheets <span class="tag tag-practica">Práctica</span></div>
+        <p style="margin-bottom:14px;">Vamos a analizar los resultados de un experimento de clase directamente desde Claude, sin copiar ni pegar nada:</p>
+        <ol class="steps">
+          <li><strong>Crea una Sheets de prueba</strong> en Drive con datos ficticios: columna A = nombre del alumno, B = nota examen 1, C = nota examen 2, D = asistencia (%). Añade 15-20 filas.</li>
+          <li><strong>Activa la Skill de Google Sheets</strong> en claude.ai → Configuración → Integraciones. Autoriza el acceso.</li>
+          <li><strong>Copia el enlace</strong> de tu Sheets (botón "Compartir" → copiar enlace).</li>
+          <li><strong>En Claude,</strong> pega el enlace y usa el prompt de abajo. Claude leerá los datos directamente.</li>
+          <li><strong>Revisa los resultados</strong> que Claude escriba en la hoja. Comprueba que las fórmulas y valores son correctos.</li>
+          <li><strong>Itera:</strong> "Ahora crea una hoja nueva llamada 'Resumen' con solo los alumnos que tienen asistencia menor al 80%".</li>
+        </ol>
+
+        <div class="code-block" style="margin-top:14px;">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>claude-skill-sheets-prompts.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPTS MAESTROS — CLAUDE CON SKILL DE GOOGLE SHEETS</span>
+<span class="cmt"># Pega el enlace de tu Sheets al inicio de cada prompt</span>
+
+<span class="hl">── Análisis completo ──</span>
+Accede a esta Google Sheets: [URL]
+Lee todos los datos disponibles y dime:
+1. Cuántas filas de datos hay y qué columnas contiene.
+2. Media, mínimo y máximo de cada columna numérica.
+3. Las 3 filas con los valores más bajos en la columna B.
+4. Si hay celdas vacías o con valores anómalos, indícamelo.
+
+<span class="hl">── Añadir columna calculada ──</span>
+En la Sheets: [URL]
+Añade una columna nueva llamada "Nota Final" en la primera
+columna vacía. La fórmula es:
+- Si asistencia (col D) < 50%: nota final = 0
+- Si no: nota final = media ponderada (B*0.4 + C*0.6)
+Aplícala a todas las filas con datos.
+
+<span class="hl">── Filtro y nueva hoja ──</span>
+En la Sheets: [URL]
+Crea una hoja nueva llamada "Suspensos".
+Copia en ella todas las filas donde la columna B sea menor
+que 5. Añade una fila de totales al final con la media
+de cada columna numérica.
+
+<span class="hl">── Resumen ejecutivo ──</span>
+Lee los datos de: [URL]
+Genera un informe de texto (no modifiques la Sheets) con:
+- Resumen estadístico de los datos
+- 3 observaciones clave sobre los resultados
+- 2 recomendaciones de acción basadas en los datos</div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 6: APPS SCRIPT CON IA -->
+      <div class="block">
+        <div class="block-title">Apps Script generado por IA <span class="tag tag-practica">Práctica</span></div>
+        <p>Para tareas repetitivas o complejas que las fórmulas no pueden resolver, la IA genera el <strong>script completo de Apps Script</strong> (JavaScript que Google ejecuta en sus servidores) listo para copiar en el editor de scripts de Sheets.</p>
+        <div class="callout callout-info" style="margin-top:10px;">
+          <span class="callout-icon">ℹ️</span>
+          <p>Para abrir el editor: <strong>Extensiones → Apps Script</strong>. Pega el código generado por la IA, guarda y ejecuta con el botón ▶. La primera vez pedirá permisos de autorización.</p>
+        </div>
+
+        <div class="code-block" style="margin-top:14px;">
+          <div class="code-header">
+            <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+            <span>apps-script-prompt.txt</span>
+            <button class="copy-btn" onclick="copyCode(this)">📋 Copiar</button>
+          </div>
+          <div class="code-content"><span class="cmt"># PROMPT MAESTRO — APPS SCRIPT CON IA</span>
+
+Actúa como un desarrollador experto en Google Apps Script.
+
+Necesito un script para Google Sheets que haga lo siguiente:
+[Describe la automatización con detalle, ej:
+"Recorra todas las filas de la hoja 'Datos', calcule la media
+de las columnas B y C ponderada (B=40%, C=60%), escriba el
+resultado en la columna D, y coloree la celda en verde si
+el resultado es ≥ 5 o en rojo si es menor. Al finalizar,
+muestre un mensaje indicando cuántas filas procesó."]
+
+Requisitos del código:
+- Escrito en Google Apps Script (JavaScript para Sheets).
+- Comentado línea a línea en español.
+- Con manejo de errores: si una celda está vacía, sáltala.
+- Al final, añade instrucciones en comentarios sobre cómo
+  ejecutarlo y cómo asignarlo a un botón en la hoja.</div>
+        </div>
+      </div>
+
+      <!-- QUIZ -->
+      <div class="block">
+        <div class="block-title">🧠 Quiz — IA en Hojas de Cálculo <span class="tag tag-comparativa">Test</span></div>
+        <div id="quiz-hojas">
+          <div class="quiz-q">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">1. ¿Cuál es la diferencia entre usar ChatGPT para fórmulas y usar la Skill de Google Sheets de Claude?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">ChatGPT genera fórmulas más avanzadas que Claude</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">Con la Skill, Claude lee y escribe en la hoja directamente; sin ella, tienes que copiar y pegar manualmente</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">No hay diferencia práctica, ambos acceden a Google Drive</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">2. Quieres añadir funciones =GPT() directamente en las celdas de tu Sheets. ¿Qué necesitas instalar?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">La Skill de Google Sheets de Claude</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">El Add-on "GPT for Sheets and Docs" desde Google Workspace Marketplace</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">El panel lateral de Gemini integrado en Sheets</div>
+            </div>
+          </div>
+          <div class="quiz-q" style="margin-top:16px;">
+            <p style="font-weight:600;color:var(--text-primary);margin-bottom:10px;">3. ¿Dónde se pega y ejecuta un script de Apps Script generado por IA?</p>
+            <div class="quiz-opts">
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">En la consola del navegador (F12 → Consola)</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,false)">En una celda de la hoja precedido por el símbolo =</div>
+              <div class="quiz-opt" onclick="answerQuiz(this,true)">En Extensiones → Apps Script → editor de código → botón ▶</div>
+            </div>
+          </div>
+          <div id="quiz-hojas-score" style="display:none;"></div>
+        </div>
+      </div>
+
+    </div><!-- /section-body -->
   </main>
 </div>
 <script src="nav.js"></script>
 </body>
 </html>
-
-
